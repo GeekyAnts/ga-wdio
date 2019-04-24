@@ -9,10 +9,10 @@ commonConfJS.content = (answers) => {
   
   baseUrl: "${get(answers, 'baseUrl', '')}",
   logLevel: "${get(answers, 'logLevel', 'info')}",
-  waitforTimeout: "${get(answers, 'waitTimeout', 10000)}",
-  connectionRetryCount: "${get(answers, 'retryCount', 3)}",
+  waitforTimeout: ${get(answers, 'waitTimeout', 10000)},
+  connectionRetryCount: ${get(answers, 'retryCount', 3)},
   outputDir: "${get(answers, 'outputDir', './store/logs/')}",
-  connectionRetryTimeout: "${get(answers, 'waitTimeout', 10000)}",
+  connectionRetryTimeout: ${get(answers, 'waitTimeout', 10000)},
   screenshotPath: "${get(answers, 'screenshotPath', './store/screenshots/')}",
 
   specs: [

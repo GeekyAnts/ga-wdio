@@ -1,5 +1,8 @@
 #!/usr/bin/env node
 
+// Settings Globals
+process.env.GA_PROJECT_PATH = process.cwd();
+
 const program = require("commander");
 const { create } = require("./libraries/create");
 const { runner } = require("./libraries/runner");
@@ -23,8 +26,8 @@ program
 program
 	.command('runner')
 	.description('Runs the testing scripts with the options / stacks specified')
-	.option('-s, --stack <browser-stack>', 'runs your tests on the local system or browser-stack', 'local') 
-	.option('-b, --browser <firefox>', 'web browser [chrome or firefox]', 'chrome')
+	.option('-s, --stack <local> <browser-stack> <browser-stack-local>', 'runs your tests on the local system or browser-stack', 'local') 
+	.option('-b, --browser <chrome> <firefox>', 'web browser [chrome or firefox]', 'chrome')
 	.option('-m, --mode [headless]', 'sets the mode to the run web-browser, this feature is applicable only with local stack', 'head')
 	.on('--help', () => {
 		console.log('');

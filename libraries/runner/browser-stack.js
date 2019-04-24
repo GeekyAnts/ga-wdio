@@ -1,34 +1,22 @@
+const executor = require("./exec");
+const { browserStackPath, browserStackLocalPath } = require("../helpers/path");
 
-const chromedriver = require("chromedriver");
-const util = require("util");
-const exec = util.promisify(require("child_process").exec);
+let browserStack = {};
 
-const browserStack = async () => {
-	return new Promise(async (resolve, reject) => {
-		const command = "./geekyants-tester/node_modules/.bin/wdio geekyants-tester/conf/browser-stack.conf.js";
+browserStack.init = async () => {	
+	const _conf = browserStackPath();
 
-		const args = [
-			"--port=4444",
-			"--url-base=/wd/hub"
-		];
-
-		const returnPromises = true;
-
-		chromedriver
-			.start(args, returnPromises)
-			.then(async () => {
-				console.log("Chrome Driver is running...");
-
-				const { stdout, stderr } = await exec(command);
-
-				console.log(stdout || stderr);
-
-				if (stderr) return resolve(stderr || stdout);
-				return resolve(stdout);
-			});
-	});
+	executor
+		.init(_conf)
+		.then(code => code);
 };
 
-module.exports = {
-	browserStack
+browserStack.local = async () => {
+	const _conf = browserStackLocalPath();
+
+	executor
+		.init(_conf)
+		.then(code => code);
 };
+
+module.exports = browserStack;

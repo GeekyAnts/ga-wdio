@@ -4,15 +4,13 @@ const {
 
 const {
 	packageJson, babelConfigJS, testJS,
-	
 	browserStackConfJS, chromeHeadlessConfJS, chromeConfJS,
-	geckoConfJS, geckoHeadlessConfJS, localConfJS,
-	
-	buttonClickJS, openPageJS, loginJS, screenRecordingJS, 
-	scrollPageJS, scrollToElementJS, signUpJS, loginPathJSON, 
+	geckoConfJS, geckoHeadlessConfJS, localConfJS, uploadPageJS, 
+	formPageJS, buttonClickJS, openPageJS, loginJS, loginPathJSON, 
+	scrollPageJS, scrollToElementJS, signUpJS, screenRecordingJS, 
 	signupPathJSON, uploadPhotoJSON, scrollDownJS,	scrollTillJS,	
 	singleTestJS,	testScreenRecordJS,	loginPageJS,	signUpPageJS,	
-	uploadImageJS
+	uploadImageJS, screenshotJS
 } = require("../../stubs");
 
 let creator = {};
@@ -110,6 +108,7 @@ creator.generateFiles = async (_answers) => {
 	await createFileWithContent(`./${_answers.appName}/${loginJS.path}`, loginJS.filename, loginJS.content);
 	await createFileWithContent(`./${_answers.appName}/${openPageJS.path}`, openPageJS.filename, openPageJS.content);
 	await createFileWithContent(`./${_answers.appName}/${screenRecordingJS.path}`, screenRecordingJS.filename, screenRecordingJS.content);
+	await createFileWithContent(`./${_answers.appName}/${screenshotJS.path}`, screenshotJS.filename, screenshotJS.content);
 	await createFileWithContent(`./${_answers.appName}/${scrollPageJS.path}`, scrollPageJS.filename, scrollPageJS.content);
 	await createFileWithContent(`./${_answers.appName}/${scrollToElementJS.path}`, scrollToElementJS.filename, scrollToElementJS.content);
 	await createFileWithContent(`./${_answers.appName}/${signUpJS.path}`, signUpJS.filename, signUpJS.content);
@@ -122,6 +121,10 @@ creator.generateFiles = async (_answers) => {
 	await createFileWithContent(`./${_answers.appName}/${loginPageJS.path}`, loginPageJS.filename, loginPageJS.content);
 	await createFileWithContent(`./${_answers.appName}/${signUpPageJS.path}`, signUpPageJS.filename, signUpPageJS.content);
 	await createFileWithContent(`./${_answers.appName}/${uploadImageJS.path}`, uploadImageJS.filename, uploadImageJS.content);
+
+	// Create Repo files...
+	await createFileWithContent(`./${_answers.appName}/${uploadPageJS.path}`, uploadPageJS.filename, uploadPageJS.content);
+	await createFileWithContent(`./${_answers.appName}/${formPageJS.path}`, formPageJS.filename, formPageJS.content);
 
 	// Create XPath files...
 	await createFileWithContent(`./${_answers.appName}/${loginPathJSON.path}`, loginPathJSON.filename, loginPathJSON.content);

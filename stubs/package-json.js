@@ -32,6 +32,7 @@ packageJson.content = `{
 	"dependencies": {
 		"@babel/polyfill": "^7.4.3",
 		"chromedriver": "^73.0.0",
+		"geckodriver": "^1.16.2",
 		"@wdio/cli": "^5.7.10",
 		"babel-preset-stage-0": "^6.24.1",
 		"browserstack-local": "^1.3.7",
