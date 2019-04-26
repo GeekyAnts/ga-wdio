@@ -1,3 +1,4 @@
+const { get } = require("lodash");
 const commonJS = require("./common.conf");
 
 let confJS = {};
@@ -8,7 +9,9 @@ confJS.path = "conf";
 confJS.content = (answers) => {
   const _commonPartial = commonJS.content(answers);
 
-  return `exports.config = {
+  return `const video = require("wdio-video-reporter");
+
+exports.config = {
 	runner: 'local',
 
 	maxInstances: 1,
@@ -22,6 +25,13 @@ confJS.content = (answers) => {
 			],
 		}
 	}],
+
+	reporters: [
+    [video, {
+      videoSlowdownMultiplier: 10,
+      outputDir: \`${get(answers, 'outputDir', './storage/')}\${process.env.GA_SESSION_ID}/\`,
+    }],
+	],
 ${_commonPartial}
 };`;
 };

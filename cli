@@ -1,7 +1,10 @@
 #!/usr/bin/env node
 
+const _date = new Date;
+
 // Settings Globals
 process.env.GA_PROJECT_PATH = process.cwd();
+process.env.GA_SESSION_ID = `SESSION_${_date.getTime()}`;
 
 const program = require("commander");
 const { create } = require("./libraries/create");

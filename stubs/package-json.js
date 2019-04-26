@@ -40,7 +40,7 @@ packageJson.content = `{
 		"path": "^0.12.7",
 		"wdio": "^3.0.3",
 		"wdio-mocha-framework": "^0.6.4",
-		"wdio-video-recorder": "^1.0.2",
+		"wdio-video-reporter": "^1.2.4",
 		"webdriverio": "^5.6.3"
 	}
 }`;

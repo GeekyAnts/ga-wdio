@@ -11,9 +11,9 @@ commonConfJS.content = (answers) => {
   logLevel: "${get(answers, 'logLevel', 'info')}",
   waitforTimeout: ${get(answers, 'waitTimeout', 10000)},
   connectionRetryCount: ${get(answers, 'retryCount', 3)},
-  outputDir: "${get(answers, 'outputDir', './store/logs/')}",
+  outputDir: \`${get(answers, 'outputDir', './storage/')}\${process.env.GA_SESSION_ID}/\`,
   connectionRetryTimeout: ${get(answers, 'waitTimeout', 10000)},
-  screenshotPath: "${get(answers, 'screenshotPath', './store/screenshots/')}",
+  screenshotPath: \`${get(answers, 'outputDir', './storage/')}\${process.env.GA_SESSION_ID}/\`,
 
   specs: [
     './src/tests/**/**.js',

@@ -9,7 +9,7 @@ confJS.path = "conf";
 confJS.content = (answers) => {
   const _commonPartial = commonJS.content(answers);
 
-  return `var browserstack = require('browserstack-local');
+  return `const browserstack = require("browserstack-local");
 
 exports.config = {
   user: "${get(answers, 'browserStack.user', '')}",
