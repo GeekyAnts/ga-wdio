@@ -1,6 +1,6 @@
 {
   "name": "ga-wdio",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "GeekyAnts Testing Boilerplate",
   "main": "./cli",
   "preferGlobal": true,
