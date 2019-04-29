@@ -22,7 +22,7 @@ program
 	.on('--help', () => {
 		console.log('');
 		console.log('Examples:');
-		console.log('  ./cli create');
+		console.log('  ga-wdio create');
 	})
 	.action(create);
 
@@ -35,9 +35,9 @@ program
 	.on('--help', () => {
 		console.log('');
 		console.log('Examples:');
-		console.log('  ./cli runner . \t\t\t\t\t\t\t# Imp Note: This command will set all the default values');
-		console.log('  ./cli runner --stack=local --browser=chrome --mode=headless');
-		console.log('  ./cli runner --stack=browser-stack --browser=firefox');
+		console.log('  ga-wdio runner . \t\t\t\t\t\t\t# Imp Note: This command will set all the default values');
+		console.log('  ga-wdio runner --stack=local --browser=chrome --mode=headless');
+		console.log('  ga-wdio runner --stack=browser-stack --browser=firefox');
 	})
 	.action(runner);
 
