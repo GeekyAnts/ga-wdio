@@ -3,7 +3,6 @@
   "version": "1.0.3",
   "description": "GeekyAnts Testing Boilerplate",
   "main": "./cli",
-  "preferGlobal": true,
   "license": "MIT",
   "keywords": [
     "testing",
@@ -19,11 +18,9 @@
     "node": ">=8",
     "npm": ">=6.8.0"
   },
-  "devDependencies": {
-    "commander": "^2.20.0",
-    "inquirer": "^6.2.2"
-  },
   "dependencies": {
+    "commander": "^2.20.0",
+    "inquirer": "^6.2.2",
     "chromedriver": "^73.0.0",
     "colors": "^1.3.3",
     "geckodriver": "^1.16.2",
