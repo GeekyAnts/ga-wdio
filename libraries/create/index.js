@@ -11,7 +11,7 @@ const { perform: runNpmInstall } = require("../install");
 // Load all the necessary questions...
 const {
 	stack, browserStackUser, browserStackKey, osVersion, 
-	osName, logLevel, outputDir, screenshotPath, baseUrl, 
+	osName, logLevel, screenshotPath, baseUrl, 
 	waitTimeout, retryCount, appName
 } = require("../../questions");
 
@@ -27,8 +27,7 @@ const create = async (options, cmd) => {
 	inquirer
 		.prompt([
 			appName, stack, browserStackUser, browserStackKey, osName, 
-			osVersion, logLevel, outputDir, screenshotPath, 
-			baseUrl, waitTimeout, retryCount
+			osVersion, logLevel, baseUrl, waitTimeout, retryCount
 		])
 		.then(async answers => {
 			console.log('--------------------------------------------------------------------'.boldWhite);

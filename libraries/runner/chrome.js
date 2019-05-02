@@ -1,4 +1,4 @@
-const chromedriver = require("chromedriver");
+const chromedriver = require("../drivers/chrome");
 
 const executor = require("./exec");
 const { chromePath, chromeHeadlessPath } = require("../helpers/path");

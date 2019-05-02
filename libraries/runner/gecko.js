@@ -1,4 +1,4 @@
-const geckodriver = require("geckodriver");
+const geckodriver = require("../drivers/gecko");
 
 const executor = require("./exec");
 const { geckoPath, geckoHeadlessPath } = require("../helpers/path");

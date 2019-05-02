@@ -3,14 +3,13 @@ const {
 } = require("../helpers/designer");
 
 const {
-	packageJson, babelConfigJS, testJS, npmRc,
+	packageJson, babelConfigJS, testJS, npmRc, screenshotJS,
 	browserStackConfJS, chromeHeadlessConfJS, chromeConfJS,
 	geckoConfJS, geckoHeadlessConfJS, localConfJS, uploadPageJS, 
 	formPageJS, buttonClickJS, openPageJS, loginJS, loginPathJSON, 
-	scrollPageJS, scrollToElementJS, signUpJS, screenRecordingJS, 
+	scrollPageJS, scrollToElementJS, signUpJS, uploadImageJS, 
 	signupPathJSON, uploadPhotoJSON, scrollDownJS,	scrollTillJS,	
-	singleTestJS,	testScreenRecordJS,	loginPageJS,	signUpPageJS,	
-	uploadImageJS, screenshotJS
+	singleTestJS, loginPageJS,	signUpPageJS
 } = require("../../stubs");
 
 let creator = {};
@@ -109,7 +108,6 @@ creator.generateFiles = async (_answers) => {
 	await createFileWithContent(`./${_answers.appName}/${buttonClickJS.path}`, buttonClickJS.filename, buttonClickJS.content);
 	await createFileWithContent(`./${_answers.appName}/${loginJS.path}`, loginJS.filename, loginJS.content);
 	await createFileWithContent(`./${_answers.appName}/${openPageJS.path}`, openPageJS.filename, openPageJS.content);
-	await createFileWithContent(`./${_answers.appName}/${screenRecordingJS.path}`, screenRecordingJS.filename, screenRecordingJS.content);
 	await createFileWithContent(`./${_answers.appName}/${screenshotJS.path}`, screenshotJS.filename, screenshotJS.content);
 	await createFileWithContent(`./${_answers.appName}/${scrollPageJS.path}`, scrollPageJS.filename, scrollPageJS.content);
 	await createFileWithContent(`./${_answers.appName}/${scrollToElementJS.path}`, scrollToElementJS.filename, scrollToElementJS.content);
@@ -119,7 +117,6 @@ creator.generateFiles = async (_answers) => {
 	await createFileWithContent(`./${_answers.appName}/${scrollDownJS.path}`, scrollDownJS.filename, scrollDownJS.content);
 	await createFileWithContent(`./${_answers.appName}/${scrollTillJS.path}`, scrollTillJS.filename, scrollTillJS.content);
 	await createFileWithContent(`./${_answers.appName}/${singleTestJS.path}`, singleTestJS.filename, singleTestJS.content);
-	await createFileWithContent(`./${_answers.appName}/${testScreenRecordJS.path}`, testScreenRecordJS.filename, testScreenRecordJS.content);
 	await createFileWithContent(`./${_answers.appName}/${loginPageJS.path}`, loginPageJS.filename, loginPageJS.content);
 	await createFileWithContent(`./${_answers.appName}/${signUpPageJS.path}`, signUpPageJS.filename, signUpPageJS.content);
 	await createFileWithContent(`./${_answers.appName}/${uploadImageJS.path}`, uploadImageJS.filename, uploadImageJS.content);

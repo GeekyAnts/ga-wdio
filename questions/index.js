@@ -10,8 +10,6 @@ module.exports = {
 	osVersion: require('./capabilities/os-version'),
 	osName: require('./capabilities/os'),
 	logLevel: require('./misc/logLevel'),
-	outputDir: require('./misc/outputDir'),
-	screenshotPath: require('./misc/screenshotPath'),
 	baseUrl: require('./misc/baseUrl'),
 	waitTimeout: require('./misc/waitTimeout'), 
 	retryCount: require('./misc/retryCount')

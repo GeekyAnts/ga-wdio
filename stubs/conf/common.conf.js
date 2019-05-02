@@ -31,9 +31,6 @@ commonConfJS.content = (answers) => {
     ],
     upload: [
       "./src/tests/profile/UploadImage.js",
-    ],
-    screenrecord: [
-      "./src/tests/TestScreenRecord.js"
     ]
   },
 
