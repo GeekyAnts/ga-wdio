@@ -1,6 +1,6 @@
 {
   "name": "ga-wdio",
-  "version": "1.0.8",
+  "version": "1.1.0",
   "description": "GeekyAnts Testing Boilerplate",
   "main": "./cli",
   "license": "MIT",
