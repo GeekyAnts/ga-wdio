@@ -7,7 +7,6 @@ An automation CLI tool that creates the project and runs things like geckodriver
 - Installation
 - Usage
   - Creator Command
-	- Runner Command
 - Architecture
 	- Boilerplate Design
 	- Folder Structure
