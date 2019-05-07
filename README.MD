@@ -15,7 +15,7 @@ An automation CLI tool that creates the project and runs things like geckodriver
 
 	- [Boilerplate Design](#boilerplate-design)
 	- [Folder Structure](#folder-structure)
-	- [Getting to know more about the folders / files](#getting-to-know-the-folders-files)
+	- [Getting to know more about the folders / files](#getting-to-know-more-about-the-folders--files)
 
 ## Installation:
 
@@ -88,7 +88,7 @@ ga-wdio runner --help
 │   └── session_<Session-Number>
 ```
 
-### Getting to know the folders / files:
+### Getting to know more about the folders / files:
 
 It is based on Page Object Model which is based on page by page test execution and therefore being divided into sub-folders for easy test management.
 
