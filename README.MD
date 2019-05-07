@@ -90,23 +90,23 @@ ga-wdio runner --help
 
 ### Getting to know more about the folders / files:
 
-It is based on Page Object Model which is based on page by page test execution and therefore being divided into sub-folders for easy test management.
+Based on Page Object Model, meaning it is based on page by page test execution & therefore we have divided things into sub-folders for easy test management.
 
 - **conf/:**
 
-	- **browser-stack.conf.js:** The configuration file which works on cross-browser testing on cloud platform(BrowserStack). It enables to test on different os versions and different browsers.
-	- **chrome-headless.conf.js:** It works within the local environment on chrome browser without a GUI. ****
-	- **chrome.conf.js:** It works within the local environment on chrome browser.
-	- **gecko-headless.conf.js:** It works within the local environment on firefox browser without a GUI. ****
-	- **gecko.conf.js:** It works within the local environment on firefox browser.
+	- **browser-stack.conf.js:** It works for BrowserStack cloud platform
+	- **chrome.conf.js:** It works within the local environment on chrome browser
+	- **gecko.conf.js:** It works within the local environment on firefox browser
+	- **chrome-headless.conf.js:** It works within the local environment on chrome browser but in headless mode
+	- **gecko-headless.conf.js:** It works within the local environment on firefox browser but in headless mode
 	
 - **src/:**
 
-	- **commons/:** It is generally the common components/functionality which are present in an application such as Login,Signup .
-	- **repo/:** It is the components/functionality which are application specific such as filling a form, downloading a file.
-	- **tests/:** It is the folder where we actually write the test scripts which is based on "Mocha" as a BDD(Behaviour driven development) testing by describing the suite and the test case for that suite.
-	- **vendor/:**
-	- **xpaths/:** Xpath is the locator of element/elements which is defined within a JSON file according to different pages in an application.
+	- **commons/:** All the common components / functionality which are present in an application such as Login, etc
+	- **repo/:** All the components / functionality which are application specific such as filling a form or downloading a file.
+	- **tests/:** The folder where we actually write the test scripts which is based on "Mocha" as a BDD (Behaviour driven development) testing by describing the suite and the test case for that suite.
+	- **vendor/:** In case, if we have to add/use some 3rd party tool.
+	- **xpaths/:** Xpath is the locator of element(s) which is defined within a JSON file according to different pages in an application.
 
-- **storage/:** Storage folder consists of screenshots,logs,videos generated after the automation-test is being executed.This folder is only generated when the test has been executed atleast once.
+- **storage/:** Storage folder contains sessions folder. These session folders will contain logs, screenshots & screen-recordings generated after the automation-test is being executed. Note: This folder will be created after you to perform tests.
 
