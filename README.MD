@@ -2,19 +2,26 @@
 
 An automation CLI tool that creates the project and runs things like geckodriver / chromedriver internally for various stacks, browsers & modes.
 
-### Documentation:
+## Table of Content:
 
-- [Notion.so](https://www.notion.so/geekyants/085bbb0e72314327878b73801fd0794d?v=207a10e7cde8409daf9be7fc13177a35)
+- Installation
+- Usage
+  - Creator Command
+	- Runner Command
+- Architecture
+	- Boilerplate Design
+	- Folder Structure
+	- Getting to know more about the folders / files
 
-### Installation:
+## Installation:
 
 ```sh
 npm install -g ga-wdio
 ```
 
-### Usage:
+## Usage:
 
-#### Creator Command:
+### Creator Command:
 
 ```sh
 ga-wdio create --help
@@ -48,3 +55,50 @@ ga-wdio runner --help
 #  ga-wdio runner --stack=local --browser=chrome --mode=headless
 #  ga-wdio runner --stack=browser-stack --browser=firefox
 ```
+
+## Architecture:
+
+### Boiler Plate Design:
+
+- The design contains `/conf/` which contains  configuration files for running the tests accroding to usage i.e. in cloud or local browsers.
+- `/src/` folder is the main folder where the project's source files are located, which contains subfolders.
+- `/storage/` folder  contains video, screenshots and log files which are generated according to sessionId(storage folder is generated only after a test has been runned).
+
+### Folder Structure:
+
+```sh
+├── conf
+│   ├── browser-stack.conf.js
+│   ├── chrome-headless.conf.js
+│   ├── chrome.conf.js
+│   ├── gecko-headless.conf.js
+│   ├── gecko.conf.js
+│   └── local.conf.js
+├── src
+│   ├── commons
+│   ├── repo
+│   ├── tests
+│   ├── vendor
+│   └── xpaths
+├── storage
+│   └── session_<Session-Number>
+```
+
+### Getting to know the folders / files:
+
+It is based on Page Object Model which is based on page by page test execution and therefore being divided into sub-folders for easy test management.
+
+1. **conf/:**
+	1. **browser-stack.conf.js:** The configuration file which works on cross-browser testing on cloud platform(BrowserStack). It enables to test on different os versions and different browsers.
+	2. **chrome-headless.conf.js:** It works within the local environment on chrome browser without a GUI. ****
+	3. **chrome.conf.js:** It works within the local environment on chrome browser.
+	4. **gecko-headless.conf.js:** It works within the local environment on firefox browser without a GUI. ****
+	5. **gecko.conf.js:** It works within the local environment on firefox browser.
+2. **src/:**
+	1. **commons/:** It is generally the common components/functionality which are present in an application such as Login,Signup .
+	2. **repo/:** It is the components/functionality which are application specific such as filling a form, downloading a file.
+	3. **tests/:** It is the folder where we actually write the test scripts which is based on "Mocha" as a BDD(Behaviour driven development) testing by describing the suite and the test case for that suite.
+	4. **vendor/:** 
+	5. **xpaths/:** Xpath is the locator of element/elements which is defined within a JSON file according to different pages in an application.
+3. **storage/:** Storage folder consists of screenshots,logs,videos generated after the automation-test is being executed.This folder is only generated when the test has been executed atleast once.
+
