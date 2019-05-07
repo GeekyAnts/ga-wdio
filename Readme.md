@@ -1,4 +1,6 @@
-# GeekyAnts Testing Tool:
+# GA WDIO:
+
+An automation CLI tool that creates the project and runs things like geckodriver / chromedriver internally for various stacks, browsers & modes.
 
 ### Documentation:
 
@@ -12,13 +14,13 @@ npm install -g ga-wdio
 
 ### Usage:
 
-#### Creator:
+#### Creator Command:
 
 ```sh
 ga-wdio create --help
 ```
 
-### Runner:
+### Runner Command:
 
 ```sh
 ga-wdio runner --help
