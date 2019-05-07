@@ -28,7 +28,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@git.geekyants.com:boilerplate/ga-testers.git"
+    "url": "git@github.com:GeekyAnts/ga-wdio.git"
   },
   "bin": {
     "ga-wdio": "./cli"
