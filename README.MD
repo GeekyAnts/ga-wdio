@@ -9,15 +9,12 @@ An automation CLI tool that creates the project and runs things like geckodriver
 - Usage
 
 	- Creator Command
-
 	- Runner Command
 
 - Architecture
 
 	- Boilerplate Design
-
 	- Folder Structure
-
 	- Getting to know more about the folders / files
 
 ## Installation:
