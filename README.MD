@@ -5,12 +5,19 @@ An automation CLI tool that creates the project and runs things like geckodriver
 ## Table of Content:
 
 - Installation
+
 - Usage
-  - Creator Command
+
+	- Creator Command
+
 	- Runner Command
+
 - Architecture
+
 	- Boilerplate Design
+
 	- Folder Structure
+
 	- Getting to know more about the folders / files
 
 ## Installation:
