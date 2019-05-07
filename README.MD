@@ -108,5 +108,5 @@ Based on Page Object Model, meaning it is based on page by page test execution &
 	- **vendor/:** In case, if we have to add/use some 3rd party tool.
 	- **xpaths/:** Xpath is the locator of element(s) which is defined within a JSON file according to different pages in an application.
 
-- **storage/:** Storage folder contains sessions folder. These session folders will contain logs, screenshots & screen-recordings generated after the automation-test is being executed. Note: This folder will be created after you to perform tests.
+- **storage/:** Storage folder contains sessions folder. These session folders will contain logs, screenshots & screen-recordings generated from your tests.
 
