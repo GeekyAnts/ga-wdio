@@ -92,17 +92,21 @@ ga-wdio runner --help
 
 It is based on Page Object Model which is based on page by page test execution and therefore being divided into sub-folders for easy test management.
 
-1. **conf/:**
-	1. **browser-stack.conf.js:** The configuration file which works on cross-browser testing on cloud platform(BrowserStack). It enables to test on different os versions and different browsers.
-	2. **chrome-headless.conf.js:** It works within the local environment on chrome browser without a GUI. ****
-	3. **chrome.conf.js:** It works within the local environment on chrome browser.
-	4. **gecko-headless.conf.js:** It works within the local environment on firefox browser without a GUI. ****
-	5. **gecko.conf.js:** It works within the local environment on firefox browser.
-2. **src/:**
-	1. **commons/:** It is generally the common components/functionality which are present in an application such as Login,Signup .
-	2. **repo/:** It is the components/functionality which are application specific such as filling a form, downloading a file.
-	3. **tests/:** It is the folder where we actually write the test scripts which is based on "Mocha" as a BDD(Behaviour driven development) testing by describing the suite and the test case for that suite.
-	4. **vendor/:** 
-	5. **xpaths/:** Xpath is the locator of element/elements which is defined within a JSON file according to different pages in an application.
-3. **storage/:** Storage folder consists of screenshots,logs,videos generated after the automation-test is being executed.This folder is only generated when the test has been executed atleast once.
+- **conf/:**
+
+	- **browser-stack.conf.js:** The configuration file which works on cross-browser testing on cloud platform(BrowserStack). It enables to test on different os versions and different browsers.
+	- **chrome-headless.conf.js:** It works within the local environment on chrome browser without a GUI. ****
+	- **chrome.conf.js:** It works within the local environment on chrome browser.
+	- **gecko-headless.conf.js:** It works within the local environment on firefox browser without a GUI. ****
+	- **gecko.conf.js:** It works within the local environment on firefox browser.
+	
+- **src/:**
+
+	- **commons/:** It is generally the common components/functionality which are present in an application such as Login,Signup .
+	- **repo/:** It is the components/functionality which are application specific such as filling a form, downloading a file.
+	- **tests/:** It is the folder where we actually write the test scripts which is based on "Mocha" as a BDD(Behaviour driven development) testing by describing the suite and the test case for that suite.
+	- **vendor/:**
+	- **xpaths/:** Xpath is the locator of element/elements which is defined within a JSON file according to different pages in an application.
+
+- **storage/:** Storage folder consists of screenshots,logs,videos generated after the automation-test is being executed.This folder is only generated when the test has been executed atleast once.
 
