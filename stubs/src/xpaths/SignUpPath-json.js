@@ -1,27 +1,26 @@
-let uploadPhotoJSON = {};
+let signUpPathJSON = {};
 
-uploadPhotoJSON.path = "src/xpaths";
-uploadPhotoJSON.filename = 'SignUpPath.json';
-uploadPhotoJSON.content = `{
-	"url": "https://builderx.io/register",
+signUpPathJSON.path = "src/xpaths";
+signUpPathJSON.filename = 'SignUpPath.json';
+signUpPathJSON.content = `{
 	"seats":".seats",
-	"email": "[name='email']",
-	"name":"/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/form[1]/div[1]/div[1]/input[1]",
-	"password":"[name='password']",
-	"confirmpassword":"[name='password_confirmation']",
-	"address":"/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[2]/form[1]/div[1]/div[1]/input[1]",
-	"city":"/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[2]/form[1]/div[3]/div[1]/input[1]",
-	"cardname":"/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[2]/form[1]/div[6]/div[1]/input[1]",
-	"cardnumber":"//input[@name='number']",
-	"securitycode":"//input[@name='cvc']",
-	"expirationmonth":"//input[@placeholder='MM']",
-	"expirationyear":"//input[@placeholder='YYYY']",
-	"accept":"//input[@type='checkbox']",
-	"buy":"//span[contains(text(),'Buy Now')]",
-	"country":" //select[@class='form-control']",
-	"state":"//input[@placeholder='State']",
-	"postalcode":"//input[@placeholder='Postal Code']",
-	"confirm":"//a[@class='eupopup-closebutton btn btn-custom']"
+    "email": "[name='email']",
+    "name":"(//input[@name='name'])[2]",
+    "password":"[name='password']",
+    "confirmpassword":"[name='password_confirmation']",
+    "address":"(//input[@type='text'])[2]",
+    "city":"(//input[@type='text'])[4]",
+    "cardname":"(//input[@type='text'])[7]",
+    "cardnumber":"//input[@name='number']",
+    "securitycode":"//input[@name='cvc']",
+    "expirationmonth":"//input[@placeholder='MM']",
+    "expirationyear":"//input[@placeholder='YYYY']",
+    "accept":"//input[@type='checkbox']",
+    "buy":"//span[contains(text(),'Buy Now')]",
+    "country":" //select[@class='form-control']",
+    "state":"//input[@placeholder='State']",
+    "postalcode":"//input[@placeholder='Postal Code']",
+    "confirm":"//a[@class='eupopup-closebutton btn btn-custom']"
 }`;
 
-module.exports = uploadPhotoJSON;
+module.exports = signUpPathJSON;

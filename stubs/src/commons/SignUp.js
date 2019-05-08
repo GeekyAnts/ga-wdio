@@ -9,7 +9,7 @@ import signupXpath from "../xpaths/SignUpPath.json";
 
 class Signup extends OpenPage {
 	open () {
-		super.open(signupXpath.url);
+		super.open('register');
 	}
 	name () {
 		return $(signupXpath.name);

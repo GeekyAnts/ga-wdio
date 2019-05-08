@@ -5,13 +5,13 @@ ScrollToElementJS.path = "src/commons";
 ScrollToElementJS.filename = "ScrollToElement.js";
 
 ScrollToElementJS.content = `import OpenPage from "./OpenPage";
-
+import scrollElement from "../xpaths/ScrollToXpath.json";
 class ScrollToElement extends OpenPage {
 	open () {
 		super.open('/');
 	}
 	scrollUntilFound () {
-		return $('h5=Flutter');
+		return $(scrollElement.scrollTo);
 	} 
 }
 
