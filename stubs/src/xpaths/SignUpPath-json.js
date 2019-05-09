@@ -20,7 +20,8 @@ signUpPathJSON.content = `{
     "country":" //select[@class='form-control']",
     "state":"//input[@placeholder='State']",
     "postalcode":"//input[@placeholder='Postal Code']",
-    "confirm":"//a[@class='eupopup-closebutton btn btn-custom']"
+    "confirm":"//a[@class='eupopup-closebutton btn btn-custom']",
+    "wrongcardno":"//span[contains(text(),'Your card number is incorrect.')]"
 }`;
 
 module.exports = signUpPathJSON;

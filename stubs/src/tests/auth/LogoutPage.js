@@ -8,7 +8,9 @@ import Logout from "../../commons/Logout";
 
 describe('Logout the page', function () {
     before(() => {
-        Login.login()
+        const emailValue = 'faizz.af@gmail.com';
+        const passwordValue = '123456';
+        Login.login(emailValue,passwordValue)
     })
     it('should redirect to home page when logged out', () => {
         Logout.settings().click();

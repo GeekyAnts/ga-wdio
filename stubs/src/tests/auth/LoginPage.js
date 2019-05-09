@@ -11,16 +11,26 @@ describe("Do login in builderx page", function () {
 	});
 
 	it("should notlogin to builderx page", () => {
-		Login.email().setValue("ttt@gmail.com");
-		Login.password().setValue("wwww");
-		Login.submit().click();
-
+		const emailValue = 'ttt@gmail.com';
+		const passwordValue = 'wwww';
+		const outputText = 'Something went wrong! '
+		Login.email().setValue(emailValue)
+  
+		Login.password().setValue(passwordValue)
+  
+		Login.submit().click()
+  
 		const textShow = Login.checkOutput().getText();
-		assert(textShow, "Something went wrong!");
+		assert(textShow, outputText);
 	});
 
 	it("should login to builderx page", () => {
-		Login.login("faizz.af@gmail.com", "123456");
+		const emailValue = 'faizz.af@gmail.com';
+		const passwordValue = '123456';
+		Login.login(emailValue, passwordValue);
+		const outputTitle = browser.getTitle();
+		const expectedTitle = 'License';
+		assert(outputTitle, outputTitle.includes(expectedTitle));
 	});
 });`;
 
