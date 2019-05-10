@@ -9,7 +9,9 @@ const {
 	formPageJS, buttonClickJS, openPageJS, loginJS, loginPathJSON, 
 	scrollPageJS, scrollToElementJS, signUpJS, uploadImageJS, 
 	signupPathJSON, uploadPhotoJSON, scrollDownJS,	scrollTillJS,	
-	singleTestJS, loginPageJS,	signUpPageJS
+	singleTestJS, loginPageJS,	signUpPageJS, logoutJS, learnDocsJS,
+	logoutPageJS, learnPageJS, learnPathJSON, logoutPathJSON, 
+	scrollPathJSON, scrollToXpathJSON
 } = require("../../stubs");
 
 let creator = {};
@@ -112,6 +114,7 @@ creator.generateFiles = async (_answers) => {
 	await createFileWithContent(`./${_answers.appName}/${scrollPageJS.path}`, scrollPageJS.filename, scrollPageJS.content);
 	await createFileWithContent(`./${_answers.appName}/${scrollToElementJS.path}`, scrollToElementJS.filename, scrollToElementJS.content);
 	await createFileWithContent(`./${_answers.appName}/${signUpJS.path}`, signUpJS.filename, signUpJS.content);
+	await createFileWithContent(`./${_answers.appName}/${logoutJS.path}`, logoutJS.filename, logoutJS.content);
 
 	// Create tests files...
 	await createFileWithContent(`./${_answers.appName}/${scrollDownJS.path}`, scrollDownJS.filename, scrollDownJS.content);
@@ -120,15 +123,22 @@ creator.generateFiles = async (_answers) => {
 	await createFileWithContent(`./${_answers.appName}/${loginPageJS.path}`, loginPageJS.filename, loginPageJS.content);
 	await createFileWithContent(`./${_answers.appName}/${signUpPageJS.path}`, signUpPageJS.filename, signUpPageJS.content);
 	await createFileWithContent(`./${_answers.appName}/${uploadImageJS.path}`, uploadImageJS.filename, uploadImageJS.content);
+	await createFileWithContent(`./${_answers.appName}/${learnDocsJS.path}`, learnDocsJS.filename, learnDocsJS.content);
+	await createFileWithContent(`./${_answers.appName}/${logoutPageJS.path}`, logoutPageJS.filename, logoutPageJS.content);
 
 	// Create repo files...
 	await createFileWithContent(`./${_answers.appName}/${uploadPageJS.path}`, uploadPageJS.filename, uploadPageJS.content);
 	await createFileWithContent(`./${_answers.appName}/${formPageJS.path}`, formPageJS.filename, formPageJS.content);
+	await createFileWithContent(`./${_answers.appName}/${learnPageJS.path}`, learnPageJS.filename, learnPageJS.content);
 
 	// Create xpath files...
 	await createFileWithContent(`./${_answers.appName}/${loginPathJSON.path}`, loginPathJSON.filename, loginPathJSON.content);
 	await createFileWithContent(`./${_answers.appName}/${signupPathJSON.path}`, signupPathJSON.filename, signupPathJSON.content);
 	await createFileWithContent(`./${_answers.appName}/${uploadPhotoJSON.path}`, uploadPhotoJSON.filename, uploadPhotoJSON.content);
+	await createFileWithContent(`./${_answers.appName}/${learnPathJSON.path}`, learnPathJSON.filename, learnPathJSON.content);
+	await createFileWithContent(`./${_answers.appName}/${logoutPathJSON.path}`, logoutPathJSON.filename, logoutPathJSON.content);
+	await createFileWithContent(`./${_answers.appName}/${scrollPathJSON.path}`, scrollPathJSON.filename, scrollPathJSON.content);
+	await createFileWithContent(`./${_answers.appName}/${scrollToXpathJSON.path}`, scrollToXpathJSON.filename, scrollToXpathJSON.content);
 };
 
 module.exports = creator;

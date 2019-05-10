@@ -6,6 +6,7 @@ ScrollToElementJS.filename = "ScrollToElement.js";
 
 ScrollToElementJS.content = `import OpenPage from "./OpenPage";
 import scrollElement from "../xpaths/ScrollToXpath.json";
+
 class ScrollToElement extends OpenPage {
 	open () {
 		super.open('/');

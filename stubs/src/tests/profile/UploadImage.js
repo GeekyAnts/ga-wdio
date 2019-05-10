@@ -1,7 +1,7 @@
 let uploadImageJS = {};
 
 uploadImageJS.path = "src/tests/profile";
-uploadImageJS.filename = 'UploadImage.js';
+uploadImageJS.filename = "UploadImage.js";
 uploadImageJS.content = `import Login from "../../commons/Login";
 import UploadPage from "../../repo/UploadPage";
 
@@ -11,8 +11,10 @@ describe("Do upload image in builderx page", function () {
 	});
 
 	it("should upload the image", () => {
-		const fileName ='/Users/biswajeet/Downloads/voting-7.jpg';
+		const fileName = "/path/to/image/file.jpg";
+		
 		Login.login("faizz.af@gmail.com", "123456");
+
 		UploadPage.image().click();
 		UploadPage.settings().click();
 		UploadPage.profile().click();
