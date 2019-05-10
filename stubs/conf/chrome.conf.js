@@ -18,7 +18,18 @@ exports.config = {
 
 	capabilities: [{
 		maxInstances: 1,
-		browserName: 'chrome'
+		browserName: 'chrome',
+		chromeOptions: {
+			args: [
+				'disable-extensions',
+				'safebrowsing-disable-extension-blacklist',
+				'safebrowsing-disable-download-protection'
+			],
+			prefs: {
+				'safebrowsing.enabled': true,
+				'download.default_directory': \`\${process.env.GA_SESSION_ID}/\`
+			}
+		}
 	}],
 
 	reporters: [
