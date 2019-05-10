@@ -11,12 +11,12 @@ describe("Do upload image in builderx page", function () {
 	});
 
 	it("should upload the image", () => {
+		const fileName ='/Users/biswajeet/Downloads/voting-7.jpg';
 		Login.login("faizz.af@gmail.com", "123456");
 		UploadPage.image().click();
 		UploadPage.settings().click();
 		UploadPage.profile().click();
-		UploadPage.photo().click();
-		UploadPage.add();
+		UploadPage.photo().setValue(fileName);
 	});
 });`;
 

@@ -5,19 +5,19 @@ ScrollPageJS.path = "src/commons";
 ScrollPageJS.filename = "ScrollPage.js";
 
 ScrollPageJS.content = `import OpenPage from "./OpenPage";
-
+import scrollXpath from "../xpaths/ScrollPath.json";
 class ScrollPage extends OpenPage {
 	open () {
 		super.open('/');
 	}
 	width () {
-		return $('#spark-app').getSize('width');
+		return $(scrollXpath.pageBody).getSize('width');
 	}
 	height () {
-		return $('#spark-app').getSize('height');
+		return $(scrollXpath.pageBody).getSize('height');
 	}
 	scrollDown () {
-		window.scrollTo(0, document.body.scrollHeight);
+		browser.touchScroll(0, this.height());
 	}
 }
 

@@ -5,27 +5,27 @@ LoginJS.path = "src/commons";
 LoginJS.filename = "Login.js";
 
 LoginJS.content = `import OpenPage from "./OpenPage";
-import LoginXpath from "../xpaths/LoginPath.json";
+import loginXpath from "../xpaths/LoginPath.json";
 
 class Login extends OpenPage {
 	open () {
-		super.open(LoginXpath.url);
+		super.open('login');
 	}
 	email () {
-		return $(LoginXpath.email);
+		return $(loginXpath.email);
 	}
 	password () {
-		return $(LoginXpath.password);
+		return $(loginXpath.password);
 	}
 	submit () {
-		return $(LoginXpath.submit);
+		return $(loginXpath.submit);
 	}
 	checkOutput () {
-		return $(LoginXpath.checkOutput);
+		return $(loginXpath.checkOutput);
 	}
-	login (user, pass) {
-		this.email().setValue(user);
-		this.password().setValue(pass);
+	login (userName, password) {
+		this.email().setValue(userName);
+		this.password().setValue(password);
 		this.submit().click();
 	}
 }
