@@ -1,7 +1,7 @@
 let learnDocsJS = {};
 
 learnDocsJS.path = "src/tests";
-learnDocsJS.filename = 'ScrollDown.js';
+learnDocsJS.filename = 'LearnDocs.js';
 learnDocsJS.content = `import Learnpage from "../repo/LearnPage";
 const assert = require("assert");
 
