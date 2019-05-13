@@ -22,7 +22,6 @@ class LearnPage extends OpenPage{
     }
 
 }
-export default new LearnPage();
-`;
+export default new LearnPage();`;
 
 module.exports = learnPageJS;

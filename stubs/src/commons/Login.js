@@ -9,7 +9,7 @@ import loginXpath from "../xpaths/LoginPath.json";
 
 class Login extends OpenPage {
 	open () {
-		super.open('login');
+		super.open("login");
 	}
 	email () {
 		return $(loginXpath.email);

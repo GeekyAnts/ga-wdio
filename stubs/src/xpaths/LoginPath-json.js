@@ -1,7 +1,7 @@
 let loginPathJSON = {};
 
 loginPathJSON.path = "src/xpaths";
-loginPathJSON.filename = 'LoginPath.json';
+loginPathJSON.filename = "LoginPath.json";
 loginPathJSON.content = `{
 	"email": "[name='email']",
 	"password": "[name='password']",
