@@ -3,7 +3,7 @@ let signUpPageJS = {};
 signUpPageJS.path = "src/tests/auth";
 signUpPageJS.filename = 'SignUpPage.js';
 signUpPageJS.content = `import SignUp from "../../commons/SignUp";
-
+const assert = require('assert');
 describe("Do Signup in builderx page", function () {
 	beforeEach(() => {
 		SignUp.open();
@@ -22,7 +22,6 @@ describe("Do Signup in builderx page", function () {
         const secValue = '444';
         const expMonthValue = '01';
 		const expYearValue = '2021';
-		const expWrongMsg = SignUp.wrongCard();
 		const wrongMsg = 'Your card number is incorrect.'
 		
         SignUp.confirm().doubleClick()
@@ -45,8 +44,10 @@ describe("Do Signup in builderx page", function () {
         SignUp.accept().scrollIntoView()
         SignUp.accept().click()
 
-		SignUp.buy().click()
-		assert(expWrongMsg, wrongMsg)
+        SignUp.buy().click();
+        const expWrongMsg = SignUp.wrongCard().getText();
+
+        assert(expWrongMsg, wrongMsg)
 	});
 });`;
 

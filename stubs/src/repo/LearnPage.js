@@ -3,6 +3,7 @@ let learnPageJS = {};
 learnPageJS.path = "src/repo";
 learnPageJS.filename = 'LearnPage.js';
 learnPageJS.content = `import OpenPage from '../commons/OpenPage';
+import learnAction from '../xpaths/LearnPath.json';
 class LearnPage extends OpenPage{
     open(){
         super.open('/')
