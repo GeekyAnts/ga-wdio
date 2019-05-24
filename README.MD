@@ -4,6 +4,8 @@ An automation CLI tool that creates the project and runs things like geckodriver
 
 ## Table of Content:
 
+- [Features](#features)
+
 - [Installation](#installation)
 
 - [Usage](#usage)
@@ -16,6 +18,18 @@ An automation CLI tool that creates the project and runs things like geckodriver
 	- [Boilerplate Design](#boilerplate-design)
 	- [Folder Structure](#folder-structure)
 	- [Getting to know more about the folders / files](#getting-to-know-more-about-the-folders--files)
+
+## Features:
+
+- Creates a boilerplate for testing framework Webdriver I/O.
+- Adds configuration for;
+	- browser-stack, browser-stack local, and local 
+	- browser type like chrome and gecko (firefox) for now
+	- mode type like head or headless
+- Runs your tests using simple command and arguements.
+- Meanwhile under the hood it takes care of running drivers, WDIO conf, etc.
+- Creates a new session folder for everytime you run your test cases, so in this way you can keep all the track record for that single test in one place.
+- Generates the screen record and screen shots, and stores them into the session folder.
 
 ## Installation:
 
