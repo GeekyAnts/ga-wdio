@@ -1,8 +1,8 @@
 let uploadPageJS = {};
 
 uploadPageJS.path = "src/repo";
-uploadPageJS.filename = 'UploadPage.js';
-uploadPageJS.content = `import uploadXpath from '../xpaths/UploadPhoto.json'
+uploadPageJS.filename = "UploadPage.js";
+uploadPageJS.content = `import uploadXpath from "../xpaths/UploadPhoto.json";
 
 class UploadPage {
 	image () {
