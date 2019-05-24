@@ -12,7 +12,7 @@ const { runner } = require("./libraries/runner");
 const { makeRed } = require("./libraries/helpers/colors");
 
 program
-	.version("1.1.4")
+	.version("1.1.5")
 	.usage('<commands> [options]')
 	.description("A Simple Tool that builds a boilerplate for you");
 
