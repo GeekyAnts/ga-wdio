@@ -15,14 +15,16 @@ describe("View Documentation of Learn Builderx ", function () {
 		Learnpage.designerClick().click();
 		Learnpage.getTheUrl();
 		const pageUrl = Learnpage.getTheUrl();
-		assert(pageUrl, "https://builderx.io/learn/designers/")
+		const actualUrl="https://builderx.io/learn/designers/";
+		assert(pageUrl, actualUrl)
 	});
 
 	it("should view documentation of Developer", () => {
 		Learnpage.developerClick().click();
 		Learnpage.getTheUrl();
 		const pageUrl = Learnpage.getTheUrl();
-		assert(pageUrl, "https://builderx.io/learn/developers/")
+		const actualUrl="https://builderx.io/learn/developers/";
+		assert(pageUrl, actualUrl)
 	});
 });`;
 

@@ -1,25 +1,27 @@
 let learnPageJS = {};
 
 learnPageJS.path = "src/repo";
-learnPageJS.filename = 'LearnPage.js';
-learnPageJS.content = `import OpenPage from '../commons/OpenPage';
+learnPageJS.filename = "LearnPage.js";
+learnPageJS.content = `import OpenPage from "../commons/OpenPage";
+import learnAction from "../xpaths/LearnPath.json";
 
-class LearnPage extends OpenPage{
-	open(){
-		super.open('/')
-	}
-	learnClick(){
-		return $(learnAction.learnLink)
-	}
-	designerClick(){
-		return $(learnAction.designer)
-	}
-	developerClick(){
-		return $(learnAction.developer)
-	}
-	getTheUrl(){
-		return browser.getUrl()
-	}
+class LearnPage extends OpenPage {
+    open () {
+        super.open("/");
+    }
+    learnClick () {
+        return $(learnAction.learnLink);
+    }
+    designerClick () {
+        return $(learnAction.designer);
+    }
+    developerClick () {
+        return $(learnAction.developer);
+    }
+    getTheUrl () {
+        return browser.getUrl();
+    }
+
 }
 export default new LearnPage();`;
 

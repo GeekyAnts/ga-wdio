@@ -12,7 +12,6 @@ describe("Do upload image in builderx page", function () {
 
 	it("should upload the image", () => {
 		const fileName = "/path/to/image/file.jpg";
-		
 		Login.login("faizz.af@gmail.com", "123456");
 
 		UploadPage.image().click();
