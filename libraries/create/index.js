@@ -2,17 +2,13 @@
 const colors = require("colors");
 const inquirer = require("inquirer");
 
-const {
-	init, generateFolders, generateFiles
-} = require("./creator");
-
 const { perform: runNpmInstall } = require("../install");
 
 // Load all the necessary questions...
 const {
 	stack, browserStackUser, browserStackKey, osVersion, 
 	osName, logLevel, screenshotPath, baseUrl, 
-	waitTimeout, retryCount, appName
+	waitTimeout, retryCount, appName, arch
 } = require("../../questions");
 
 // Define custom theme...
@@ -26,13 +22,17 @@ const create = async (options, cmd) => {
 	// Start the CLI communication...
 	inquirer
 		.prompt([
-			appName, stack, browserStackUser, browserStackKey, osName, 
+			arch, appName, stack, browserStackUser, browserStackKey, osName, 
 			osVersion, logLevel, baseUrl, waitTimeout, retryCount
 		])
 		.then(async answers => {
 			console.log('--------------------------------------------------------------------'.boldWhite);
 			console.log("\n?".green, "Please wait...".yellow);
 			console.log('--------------------------------------------------------------------'.boldWhite);
+
+			const {
+				init, generateFolders, generateFiles
+			} = require("./creator")(answers.arch);
 
 			console.log("?".green, `Creating your`.boldWhite, `${answers.appName}`.cyan, 'directory...'.boldWhite);
 			await init(answers.appName);
