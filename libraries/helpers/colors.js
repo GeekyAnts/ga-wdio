@@ -1,8 +1,8 @@
 
 const colors = require("colors");
 
-const makeRed = (txt) => colors.red(txt);
+let helpers = {};
 
-module.exports = {
-	makeRed
-};
+helpers.makeRed = (txt) => colors.red(txt);
+
+module.exports = helpers;

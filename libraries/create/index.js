@@ -2,6 +2,7 @@
 const colors = require("colors");
 const inquirer = require("inquirer");
 
+const { drawLine, showInfo } = require("../helpers/terminal");
 const { perform: runNpmInstall } = require("../install");
 
 // Load all the necessary questions...
@@ -11,13 +12,8 @@ const {
 	waitTimeout, retryCount, appName, arch
 } = require("../../questions");
 
-// Define custom theme...
-colors.setTheme({
-	boldWhite: ['white', 'bold']
-});
-
 const create = async (options, cmd) => {
-	console.log('--------------------------------------------------------------------'.boldWhite);
+	drawLine();
 
 	// Start the CLI communication...
 	inquirer
@@ -26,25 +22,28 @@ const create = async (options, cmd) => {
 			osVersion, logLevel, baseUrl, waitTimeout, retryCount
 		])
 		.then(async answers => {
-			console.log('--------------------------------------------------------------------'.boldWhite);
+			drawLine();
+
 			console.log("\n?".green, "Please wait...".yellow);
-			console.log('--------------------------------------------------------------------'.boldWhite);
+
+			drawLine();
 
 			const {
 				init, generateFolders, generateFiles
 			} = require("./creator")(answers.arch);
 
-			console.log("?".green, `Creating your`.boldWhite, `${answers.appName}`.cyan, 'directory...'.boldWhite);
+			showInfo("Creating your", answers.appName, "directory...");
 			await init(answers.appName);
 
-			console.log("?".green, `Adding our directories into`.boldWhite, `${answers.appName}`.cyan, `project...`.boldWhite);
+			showInfo("Adding our directories into", answers.appName, "project...");
 			await generateFolders(answers.appName);
 
-			console.log("?".green, `Adding files into those directories of`.boldWhite, `${answers.appName}`.cyan, `project...`.boldWhite);
+			showInfo("Adding files into those directories of", answers.appName, "project...");
 			await generateFiles(answers);
 
-			console.log("?".green, `Installing NPM dependencies to`.boldWhite, `${answers.appName}`.cyan, `directory...`.boldWhite);
-			console.log('--------------------------------------------------------------------'.boldWhite);
+			showInfo("Installing NPM dependencies to", answers.appName, "directory...");
+			drawLine();
+			
 			await runNpmInstall(answers.appName);
 		});
 };

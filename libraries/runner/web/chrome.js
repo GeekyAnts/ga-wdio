@@ -1,7 +1,7 @@
-const chromedriver = require("../drivers/chrome");
+const chromedriver = require("../../drivers/chrome");
 
 const executor = require("./exec");
-const { chromePath, chromeHeadlessPath } = require("../helpers/path");
+const { chromePath, chromeHeadlessPath } = require("../../helpers/path");
 
 const args = [
 	'--port=4444',

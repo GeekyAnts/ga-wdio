@@ -32,6 +32,7 @@ bootstrap.runner = () => {
 	program
 		.command('runner')
 		.description('Runs the testing scripts with the options / stacks specified')
+		.option('-a, --api', 'runs the api testing', '')
 		.option('-s, --stack <local> <browser-stack> <browser-stack-local>', 'runs your tests on the local system or browser-stack', 'local') 
 		.option('-b, --browser <chrome> <firefox>', 'web browser [chrome or firefox]', 'chrome')
 		.option('-m, --mode [headless]', 'sets the mode to the run web-browser, this feature is applicable only with local stack', 'head')

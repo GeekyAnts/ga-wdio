@@ -1,7 +1,7 @@
-const geckodriver = require("../drivers/gecko");
+const geckodriver = require("../../drivers/gecko");
 
 const executor = require("./exec");
-const { geckoPath, geckoHeadlessPath } = require("../helpers/path");
+const { geckoPath, geckoHeadlessPath } = require("../../helpers/path");
 
 const args = [
 	'--port=4444'

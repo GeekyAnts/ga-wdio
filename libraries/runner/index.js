@@ -1,12 +1,19 @@
 const colors = require("colors");
-const { local } = require("./local");
-const browserStack = require("./browser-stack");
+const { initAPIs } = require("./api");
+const { local } = require("./web/local");
+const browserStack = require("./web/browser-stack");
+const { clearConsole, bgGreenBlack } = require("../helpers/terminal");
 
-const runner = async (options) => {
-	console.log('\033[2J');
-	console.log(`Storage folder ==> ${process.env.GA_SESSION_ID}/\n`.bgGreen.black);
+const runner = async (_options) => {
+	const { stack, browser, mode, api } = _options;
+	
+	if (api) {
+		return await initAPIs();
+	}
 
-	const { stack, browser, mode } = options;
+	clearConsole();
+
+	bgGreenBlack(`Storage folder ==> ${process.env.GA_SESSION_ID}/\n`);
 
 	switch (stack) {
 		case 'browser-stack-local':

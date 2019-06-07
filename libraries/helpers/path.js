@@ -1,12 +1,14 @@
 const fs = require("fs");
 const path = require("path");
 
+const shutDown = (_msg) => {
+	console.log("\n?".green, "[Error]:".red, `Domains or default domain does not exists for your APIs.\n`.green);
+	process.exit(1);
+};
+
 const checkIfExist = (_path, _what) => {
 	if (! fs.existsSync(_path)) {
-		console.log("\n?".green, "Error".red);
-		console.log('--------------------------------------------------------------------'.boldWhite);
-		console.log("?".green, `${_what} does not exists...! Please check the docs.`.green);
-		process.exit(1);
+		shutDown(`${_what} does not exists.`);
 	}
 };
 
@@ -65,10 +67,19 @@ const browserStackLocal = () => {
 	return _path;
 }
 
+const apiRepo = () => {
+	const _path = path.join(process.env.GA_PROJECT_PATH, "src/api.js");
+	checkIfExist(_path, "Standard API Repo missing or");
+
+	return _path;
+};
+
 module.exports = {
+	shutDown,
 	checkIfExist,
 	npm,
 	wdio,
+	apiRepo,
 	chromePath: chrome,
 	geckoPath: gecko,
 	chromeHeadlessPath: chromeHeadless,

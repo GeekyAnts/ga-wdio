@@ -1,5 +1,5 @@
 const { spawn } = require("child_process");
-const { wdio } = require("../helpers/path");
+const { wdio } = require("../../helpers/path");
 
 let executor = {};
 
