@@ -7,7 +7,18 @@ colors.setTheme({
 
 let terminal = {};
 
-terminal.drawLine = () => console.log("--------------------------------------------------------------------".boldWhite);
+// terminal.drawLine = () => console.log("--------------------------------------------------------------------".boldWhite);
+terminal.drawLine = () => {
+	// Get the available screen size
+	var width = process.stdout.columns;
+
+	var lines = '';
+	for (var i = 0; i < width; i++) {
+		lines += '-';
+	}
+
+	console.log(`${lines}`.boldWhite);
+};
 
 terminal.clearConsole = () => console.log("\033[2J");
 
@@ -21,10 +32,52 @@ terminal.showInfo = (_prefix, _midfix, _postfix) =>
 		`${_postfix}`.boldWhite
 	);
 
-terminal.heading = (_text) => {
-	terminal.drawLine();
+// Centered Heading
+terminal.centeredHeading = (str, _noLine) => {
+	if (!_noLine) {
+		terminal.drawLine();
+	}
+
+	str = typeof(str) == 'string' && str.trim().length > 0 ? str.trim() : '';
+
+	// Get the available screen size
+	const width = process.stdout.columns;
+
+	// Calculate the left padding there should be
+	const leftPadding = Math.floor((width - str.length) / 2);
+
+	// Put in lefy padded spaces before the string itself
+	let line = '';
+	for (let i = 0; i < leftPadding; i++) {
+		line += ' ';
+	}
+	line += str;
+
+	console.log(`${line}`.green);
+
+	if (!_noLine) {
+		terminal.drawLine();
+	}
+};
+
+terminal.heading = (_text, _noLine) => {
+	if (!_noLine) {
+		terminal.drawLine();
+	}
+
 	console.log(`${_text}`.green);
-	terminal.drawLine();
+
+	if (!_noLine) {
+		terminal.drawLine();
+	}
+};
+
+terminal.columns = (_text1, _text2) => {
+	console.log(`\t${_text1}`, `${_text2}`);
+};
+
+terminal.newLine = () => {
+	console.log("\n");
 };
 
 module.exports = terminal;

@@ -1,50 +1,87 @@
-const { get } = require("lodash");
+const { expect } = require("chai");
+const traverse = require("traverse");
+const { get, map, xor, difference } = require("lodash");
 
 let expected = {};
 
+expected.objectsHaveSameKeys = (...objects) => {
+	const allKeys = objects.reduce((keys, object) => keys.concat(Object.keys(object)), []);
+
+	const union = new Set(allKeys);
+	return objects.every(object => union.size === Object.keys(object).length);
+};
+
 expected.init = async (_expected, _response) => {
 	let _errors = [];
+	_errors.headers = [];
+	_errors.body = [];
 
-	if (!_response.ok || Object.keys(_expected).length === 0) {
+	if (! _response.ok) {
 		return {};
 	}
-	
+
 	const headers = _response.headers;
 	const body = await _response.json();
 
 	// Check for Expected Headers...
-	if (_expected.hasOwnProperty('headers') && Object.keys(_expected.headers) !== 0) {
-		_errors.headers = [];
-
+	if (_expected.headers !== undefined && Object.keys(_expected.headers) !== 0) {
 		for (const iterator in _expected.headers) {
 			// Check if the index exist as expected
-			if (! _response.headers.get(`${iterator}`)) {
-				_errors.headers[`${iterator}`] = "Not available";
+			if (! headers.get(`${iterator}`)) {
+				let _u = [];
+				_u['key'] = iterator;
+				_u['value'] = "Not available";
+
+				_errors.headers.push(_u);
 			}
 			
 			// Match the value of each index in headers
-			if (_response.headers.get(`${iterator}`) !== _expected.headers[`${iterator}`]) {
-				_errors.headers[`${iterator}`] = 'Receiving incorrect value as \'' + _response.headers.get(`${iterator}`) + '\'';
+			if (headers.get(`${iterator}`) !== _expected.headers[`${iterator}`]) {
+				let _u = [];
+				_u['key'] = iterator;
+				_u['value'] = 'Receiving incorrect value as \'' + headers.get(`${iterator}`) + '\'';
+
+				_errors.headers.push(_u);
 			}
 		}
 	}
 
-	// Check for Expected Body...
-	if (_expected.hasOwnProperty('body') && Object.keys(_expected.body) !== 0) {
-		_errors.body = [];
+	const bodyTraces = traverse(body).paths(x => x, []);
+	const expectedBodyTraces = traverse(_expected.body).paths(x => x, []);
 
-		if (_expected.body && _expected.body.constructor === Array) {
-			for (const iterator of _expected.body) {
-				
-			}
-		}
+	let expectedTree = [];
+	expectedBodyTraces.map(value => {
+		const _data = value.join(".");
+		const _iterator = get(_expected.body, _data);
 
-		for (const iterator in body) {
-			//
+		if (typeof _data !== 'object' && value.length > 0) {
+			expectedTree.push(_data);
 		}
+	});
+
+	let responseTree = [];
+	bodyTraces.map(value => {
+		const _data = value.join(".");
+		const _iterator = get(body, _data);
+
+		if (typeof _data !== 'object' && value.length > 0) {
+			responseTree.push(_data);
+		}
+	});
+	
+	const isSomethingLeft = difference(expectedTree, responseTree);
+	if (isSomethingLeft && isSomethingLeft.length > 0) {
+		
+		isSomethingLeft.map(_value => {
+			let _u = [];
+			_u['key'] = _value;
+			_u['value'] = `'${_value}' index is missing from the response!`;
+
+			_errors.body.push(_u);
+		});
 	}
 
-	console.log('Print:', _errors);
-};	
+	return _errors;
+};
 
 module.exports = expected;

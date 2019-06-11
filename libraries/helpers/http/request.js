@@ -8,6 +8,7 @@ const { get, includes } = require("lodash");
 const { shutDown } = require("../../helpers/path");
 
 const request = async (_options) => {
+	
 	const { 
 		uri, method, headers, timeout, data
 	} = _options;

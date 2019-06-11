@@ -24,7 +24,7 @@ api.validateAPI = async (_path) => {
 
 api.initAPIs = async () => {
 	const _path = apiRepo();
-	
+
 	await api.validateAPI(_path);
 };
 

@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 
 const shutDown = (_msg) => {
-	console.log("\n?".green, "[Error]:".red, `Domains or default domain does not exists for your APIs.\n`.green);
+	console.log("\n?".green, "[Error]:".red, `${_msg}\n`.green);
 	process.exit(1);
 };
 
