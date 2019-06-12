@@ -4,12 +4,8 @@ const { local } = require("./web/local");
 const browserStack = require("./web/browser-stack");
 const { clearConsole, bgGreenBlack } = require("../helpers/terminal");
 
-const runner = async (_options) => {
+const web = async (_options) => {
 	const { stack, browser, mode, api } = _options;
-	
-	if (api) {
-		return await initAPIs();
-	}
 
 	clearConsole();
 
@@ -27,6 +23,13 @@ const runner = async (_options) => {
 	}
 };
 
+const api = async (_options) => {
+	clearConsole();
+	
+	return await initAPIs();
+};
+
 module.exports = {
-	runner
+	web,
+	api
 };

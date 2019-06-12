@@ -1,6 +1,6 @@
 const program = require("commander");
 const { create } = require("../create");
-const { runner } = require("../runner");
+const { web, api } = require("../runner");
 const { makeRed } = require("../helpers/colors");
 
 // Instance
@@ -17,7 +17,7 @@ bootstrap.version = (_version) => {
 // Creates the app
 bootstrap.create = () => {
 	program
-		.command('create')
+		.command('create:web')
 		.description('Creates the boilerplate in the present directory')
 		.on('--help', () => {
 			console.log('');
@@ -30,20 +30,29 @@ bootstrap.create = () => {
 // Runs the app
 bootstrap.runner = () => {
 	program
-		.command('runner')
-		.description('Runs the testing scripts with the options / stacks specified')
-		.option('-a, --api', 'runs the api testing', '')
+		.command('runner:web')
+		.description('[For WebApp] Runs the testing scripts with the options / stacks specified')
 		.option('-s, --stack <local> <browser-stack> <browser-stack-local>', 'runs your tests on the local system or browser-stack', 'local') 
 		.option('-b, --browser <chrome> <firefox>', 'web browser [chrome or firefox]', 'chrome')
 		.option('-m, --mode [headless]', 'sets the mode to the run web-browser, this feature is applicable only with local stack', 'head')
 		.on('--help', () => {
 			console.log('');
 			console.log('Examples:');
-			console.log('  ga-wdio runner . \t\t\t\t\t\t\t# Imp Note: This command will set all the default values');
-			console.log('  ga-wdio runner --stack=local --browser=chrome --mode=headless');
-			console.log('  ga-wdio runner --stack=browser-stack --browser=firefox');
+			console.log('  ga-wdio runner:web # Imp Note: This command will set all the default values');
+			console.log('  ga-wdio runner:web --stack=local --browser=chrome --mode=headless');
+			console.log('  ga-wdio runner:web --stack=browser-stack --browser=firefox');
 		})
-		.action(runner);
+		.action(web);
+	
+	program
+		.command("runner:api")
+		.description("[For API] Runs the testing scripts with the options specified")
+		.on('--help', () => {
+			console.log('');
+			console.log('Examples:');
+			console.log('  ga-wdio runner:api');
+		})
+		.action(api)
 };
 
 // Handles the arguements / options

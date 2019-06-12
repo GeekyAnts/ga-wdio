@@ -7,7 +7,6 @@ colors.setTheme({
 
 let terminal = {};
 
-// terminal.drawLine = () => console.log("--------------------------------------------------------------------".boldWhite);
 terminal.drawLine = () => {
 	// Get the available screen size
 	var width = process.stdout.columns;
@@ -20,7 +19,7 @@ terminal.drawLine = () => {
 	console.log(`${lines}`.boldWhite);
 };
 
-terminal.clearConsole = () => console.log("\033[2J");
+terminal.clearConsole = () => process.stdout.write('\033c');
 
 terminal.bgGreenBlack = (_sessionID) => console.log(`${_sessionID}`.bgGreen.black);
 
