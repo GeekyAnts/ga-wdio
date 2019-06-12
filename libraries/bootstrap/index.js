@@ -46,7 +46,7 @@ bootstrap.runner = () => {
 	
 	program
 		.command("runner:api")
-		.description("[For API] Runs the testing scripts with the options specified")
+		.description("[For API] Runs the testing API scripts in sync mode")
 		.on('--help', () => {
 			console.log('');
 			console.log('Examples:');
