@@ -10,16 +10,16 @@ const {
 	list, single
 } = require("./containers/employee");
 
-let app = {};
+let api = {};
 
-app.domains = domains;
+api.domains = domains;
 
-app.apis = [
+api.apis = [
 	list, 
 	single
 ];
 
-module.exports = app;
+module.exports = api;
 `;
 
 module.exports = apiJS;

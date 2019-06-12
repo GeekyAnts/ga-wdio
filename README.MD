@@ -9,6 +9,7 @@ An automation CLI tool that creates the project and runs things like geckodriver
 - [Installation](https://github.com/GeekyAnts/ga-wdio/wiki/Installation)
 - [Usage](https://github.com/GeekyAnts/ga-wdio/wiki/Usage)
 - [Architecture for Web](https://github.com/GeekyAnts/ga-wdio/wiki/Web-Architecture)
+- [Architecture for API](https://github.com/GeekyAnts/ga-wdio/wiki/API-Architecture)
 
 ## License
 
