@@ -12,6 +12,8 @@ An automation CLI tool that creates the project and runs things like geckodriver
 
 	- [Creator Command](#creator-command)
 	- [Runner Command](#runner-command)
+		- [Web](#web)
+		- [API](#api)
 
 - [Architecture](#architecture)
 
@@ -56,8 +58,10 @@ ga-wdio create --help
 
 ### Runner Command:
 
+#### Web:
+
 ```sh
-ga-wdio runner --help
+ga-wdio runner:web --help
 # Usage: runner [options]
 
 # Runs the testing scripts with the options / stacks specified
@@ -72,6 +76,21 @@ ga-wdio runner --help
 #  ga-wdio runner . 							# Imp Note: This command will set all the default values
 #  ga-wdio runner --stack=local --browser=chrome --mode=headless
 #  ga-wdio runner --stack=browser-stack --browser=firefox
+```
+
+#### API:
+
+```sh
+ga-wdio runner:api --help
+# Usage: runner:api [options]
+
+# [For API] Runs the testing scripts with the options specified
+
+# Options:
+#   -h, --help  output usage information
+
+# Examples:
+#   ga-wdio runner:api
 ```
 
 ## Architecture:
