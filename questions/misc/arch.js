@@ -6,7 +6,7 @@ module.exports = {
 	"default": "web",
 	"choices": [
 		"web",
-		"mobile",
-		"api"
+		"api",
+		"mobile"
 	]
 };

@@ -1,5 +1,6 @@
 
 const web = require("./web");
+const api = require("./api");
 
 module.exports = (_arch) => {
 	switch (_arch) {
@@ -7,9 +8,8 @@ module.exports = (_arch) => {
 			// do something & return;
 			break;
 		case "api":
-			// do something & return;
-			break;
+			return api;
 		default:
 			return web;
 	}
-}
+};

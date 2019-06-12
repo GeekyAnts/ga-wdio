@@ -17,7 +17,7 @@ bootstrap.version = (_version) => {
 // Creates the app
 bootstrap.create = () => {
 	program
-		.command('create:web')
+		.command('create')
 		.description('Creates the boilerplate in the present directory')
 		.on('--help', () => {
 			console.log('');

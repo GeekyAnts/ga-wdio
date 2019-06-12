@@ -5,5 +5,5 @@ module.exports = {
 	"message": "Operating System?",
 	"default": "Windows",
 	"suffix": "\n Goto https://www.browserstack.com/automate/capabilities?tag=selenium-2-3#navigation-tabs \n & Select 'NodeJS' as Code:",
-	"when": (_answers) => _answers.stack === "browser-stack",
+	"when": (_answers) => _answers.arch === "web" && _answers.stack === "browser-stack",
 };
