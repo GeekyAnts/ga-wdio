@@ -5,7 +5,7 @@ process.env.GA_PROJECT_PATH = process.cwd();
 process.env.GA_SESSION_ID = `SESSION_${(new Date).getTime()}`;
 
 const bootstrap = require("./libraries/bootstrap");
-const packageJson = require("./package.son");
+const packageJson = require("./package.json");
 
 // Sets the version
 bootstrap.version(packageJson.version);
