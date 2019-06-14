@@ -1,5 +1,6 @@
 ---
 name: Bug report
+type: web or api
 about: Create a report to help us improve
 
 ---
