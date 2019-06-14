@@ -7,7 +7,9 @@
   "keywords": [
     "testing",
     "framework",
-    "boilerplate"
+    "boilerplate",
+    "automation",
+    "node wdio"
   ],
   "author": {
     "name": "Faiz A Farooqui",
@@ -27,6 +29,7 @@
     "inquirer": "^6.2.2",
     "lodash": "^4.17.11",
     "node-fetch": "^2.6.0",
+    "np": "^5.0.3",
     "traverse": "^0.6.6"
   },
   "repository": {
