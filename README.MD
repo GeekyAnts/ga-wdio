@@ -8,7 +8,7 @@ An automation CLI tool that creates the tests project for Web & API apps and run
 npm install -g ga-wdio
 ```
 
-## Wiki:
+## Documentation:
 
 - [Home](https://github.com/GeekyAnts/ga-wdio/wiki)
 - [Features](https://github.com/GeekyAnts/ga-wdio/wiki/Features)
