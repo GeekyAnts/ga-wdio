@@ -18,11 +18,8 @@ npm install -g ga-wdio
 
 ## Support:
 
-| Version | Status | 
-|--- | --- |
-| >= [1.2.1](https://github.com/GeekyAnts/ga-wdio/releases/tag/v1.2.1) | Active Support |
-| < [1.2.1](https://github.com/GeekyAnts/ga-wdio/releases/tag/v1.2.0) | No Support |
+Please find more details regarding in our [SECURITY](https://github.com/GeekyAnts/ga-wdio/blob/master/SECURITY.md) file.
 
 ## License
 
-GA WDIO is MIT licensed, as found in the [LICENSE](https://github.com/GeekyAnts/ga-wdio/blob/feature/mobile/LICENSE.MD) file.
+GA WDIO is MIT licensed, as found in the [LICENSE](https://github.com/GeekyAnts/ga-wdio/blob/master/LICENSE.MD) file.
