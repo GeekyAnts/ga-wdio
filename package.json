@@ -6,10 +6,12 @@
   "license": "MIT",
   "keywords": [
     "testing",
+    "api-testing",
+    "web-testing",
     "framework",
     "boilerplate",
     "automation",
-    "node wdio"
+    "node-wdio"
   ],
   "author": {
     "name": "Faiz A Farooqui",
