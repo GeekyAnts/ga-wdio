@@ -18,7 +18,7 @@ npm install -g ga-wdio
 
 ## Support:
 
-Please find more details regarding in our [SECURITY](https://github.com/GeekyAnts/ga-wdio/blob/master/SECURITY.md) file.
+Please find more details in our [SECURITY](https://github.com/GeekyAnts/ga-wdio/blob/master/SECURITY.md) file.
 
 ## License
 
