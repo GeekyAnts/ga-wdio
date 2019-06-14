@@ -1,6 +1,6 @@
 # GA WDIO:
 
-An automation CLI tool that creates the project and runs things like geckodriver / chromedriver internally for various stacks, browsers & modes.
+An automation CLI tool that creates the tests project for Web & API apps and runs things like geckodriver / chromedriver internally for various stacks, browsers & modes.
 
 ## Installation:
 
