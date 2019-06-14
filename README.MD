@@ -16,6 +16,13 @@ npm install -g ga-wdio
 - [Architecture for Web](https://github.com/GeekyAnts/ga-wdio/wiki/Web-Architecture)
 - [Architecture for API](https://github.com/GeekyAnts/ga-wdio/wiki/API-Architecture)
 
+## Releases:
+
+| Version | Status | 
+|--- | --- |
+| >= [1.2.1](https://github.com/GeekyAnts/ga-wdio/releases/tag/v1.2.1) | Active Support |
+| < [1.2.1](https://github.com/GeekyAnts/ga-wdio/releases/tag/v1.2.0) | No Support |
+
 ## License
 
 GA WDIO is MIT licensed, as found in the [LICENSE](https://github.com/GeekyAnts/ga-wdio/blob/feature/mobile/LICENSE.MD) file.
