@@ -18,7 +18,7 @@ npm install -g ga-wdio
 
 ## Support:
 
-Please find more details in our [SECURITY](https://github.com/GeekyAnts/ga-wdio/blob/master/SECURITY.md) file.
+GA WDIO supported version is 1.2.2, as found in the [SECURITY](https://github.com/GeekyAnts/ga-wdio/blob/master/SECURITY.md) file.
 
 ## License
 
