@@ -19,9 +19,10 @@ exports.config = {
 	capabilities: [{
 		maxInstances: 1,
 		browserName: 'chrome',
-		chromeOptions: {
+		'goog:chromeOptions': {
 			args: [
 				'disable-extensions',
+				'disable-infobars',
 				'safebrowsing-disable-extension-blacklist',
 				'safebrowsing-disable-download-protection'
 			],
