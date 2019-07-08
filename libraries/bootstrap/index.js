@@ -1,6 +1,6 @@
 const program = require("commander");
 const { create } = require("../create");
-const { web, api } = require("../runner");
+const { web, api } = require("../run");
 const { makeRed } = require("../helpers/colors");
 
 // Instance
@@ -28,7 +28,7 @@ bootstrap.create = () => {
 };
 
 // Runs the app
-bootstrap.runner = () => {
+bootstrap.run = () => {
 	program
 		.command('run:web')
 		.description('[For WebApp] Runs the testing scripts with the options / stacks specified')

@@ -14,7 +14,7 @@ bootstrap.version(packageJson.version);
 bootstrap.create();
 
 // Boots the runner
-bootstrap.runner();
+bootstrap.run();
 
 // Adds the arguement / options handler
 bootstrap.handler();
