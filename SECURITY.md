@@ -6,8 +6,8 @@ Version currently being supported with security updates.
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 1.2.2   | :white_check_mark: |
-| <= 1.2.1| :x:             |
+| 1.2.4   | :white_check_mark: |
+| <= 1.2.3| :x:             |
 
 ## Reporting a Vulnerability
 
