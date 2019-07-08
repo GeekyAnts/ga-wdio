@@ -30,7 +30,7 @@ bootstrap.create = () => {
 // Runs the app
 bootstrap.runner = () => {
 	program
-		.command('runner:web')
+		.command('run:web')
 		.description('[For WebApp] Runs the testing scripts with the options / stacks specified')
 		.option('-s, --stack <local> <browser-stack> <browser-stack-local>', 'runs your tests on the local system or browser-stack', 'local') 
 		.option('-b, --browser <chrome> <firefox>', 'web browser [chrome or firefox]', 'chrome')
@@ -38,19 +38,19 @@ bootstrap.runner = () => {
 		.on('--help', () => {
 			console.log('');
 			console.log('Examples:');
-			console.log('  ga-wdio runner:web # Imp Note: This command will set all the default values');
-			console.log('  ga-wdio runner:web --stack=local --browser=chrome --mode=headless');
-			console.log('  ga-wdio runner:web --stack=browser-stack --browser=firefox');
+			console.log('  ga-wdio run:web # Imp Note: This command will set all the default values');
+			console.log('  ga-wdio run:web --stack=local --browser=chrome --mode=headless');
+			console.log('  ga-wdio run:web --stack=browser-stack --browser=firefox');
 		})
 		.action(web);
 	
 	program
-		.command("runner:api")
+		.command("run:api")
 		.description("[For API] Runs the testing API scripts in sync mode")
 		.on('--help', () => {
 			console.log('');
 			console.log('Examples:');
-			console.log('  ga-wdio runner:api');
+			console.log('  ga-wdio run:api');
 		})
 		.action(api)
 };
