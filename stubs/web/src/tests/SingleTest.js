@@ -23,6 +23,7 @@ describe("Submit the geekyants form and validate Submit", function () {
 		const head = FormPage.checkOutput().getText();		
 		assert.equal(head, "Thank You");
 	});
-});`;
+});
+`;
 
 module.exports = singleTestJS;

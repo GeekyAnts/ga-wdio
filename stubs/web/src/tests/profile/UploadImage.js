@@ -19,6 +19,7 @@ describe("Do upload image in builderx page", function () {
 		UploadPage.profile().click();
 		UploadPage.photo().setValue(fileName);
 	});
-});`;
+});
+`;
 
 module.exports = uploadImageJS;

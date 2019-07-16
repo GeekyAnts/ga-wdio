@@ -26,6 +26,7 @@ describe("View Documentation of Learn Builderx ", function () {
 		const actualUrl="https://builderx.io/learn/developers/";
 		assert(pageUrl, actualUrl)
 	});
-});`;
+});
+`;
 
 module.exports = learnDocsJS;

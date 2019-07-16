@@ -11,6 +11,7 @@ OpenPageJS.content = `class OpenPage {
 	}
 }
 
-export default OpenPage;`;
+export default OpenPage;
+`;
 
 module.exports = OpenPageJS;

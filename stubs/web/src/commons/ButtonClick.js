@@ -12,6 +12,7 @@ class ButtonClick extends OpenPage {
 	}
 }
 
-export default new ButtonClick();`;
+export default new ButtonClick;
+`;
 
 module.exports = buttonClickJS;

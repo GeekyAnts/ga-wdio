@@ -19,6 +19,7 @@ testJS.content = `const { remote } = require('webdriverio');
     console.log('Title was: ' + title);
 
     await browser.deleteSession();
-})().catch((e) => console.error(e));`;
+})().catch((e) => console.error(e));
+`;
 
 module.exports = testJS;

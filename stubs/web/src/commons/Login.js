@@ -30,6 +30,7 @@ class Login extends OpenPage {
 	}
 }
 
-export default new Login();`;
+export default new Login;
+`;
 
 module.exports = LoginJS;

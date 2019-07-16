@@ -16,6 +16,7 @@ class ScrollToElement extends OpenPage {
 	} 
 }
 
-export default new ScrollToElement();`;
+export default new ScrollToElement;
+`;
 
 module.exports = ScrollToElementJS;
