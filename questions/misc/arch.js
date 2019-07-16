@@ -7,6 +7,6 @@ module.exports = {
 	"choices": [
 		"web",
 		"api",
-		// "mobile"
+		"mobile"
 	]
 };
