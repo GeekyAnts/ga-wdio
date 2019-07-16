@@ -33,4 +33,5 @@ packageJson.content = `{
   "author": "",
   "license": "ISC"
 }`;
+
 module.exports = packageJson;
