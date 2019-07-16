@@ -40,6 +40,4 @@ module.exports = {
 
 	//package-json...
 	packageJson: require("./package-json"),
-
-
-}
+};
