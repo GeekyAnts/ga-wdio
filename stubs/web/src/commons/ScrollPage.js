@@ -6,6 +6,7 @@ ScrollPageJS.filename = "ScrollPage.js";
 
 ScrollPageJS.content = `import OpenPage from "./OpenPage";
 import scrollXpath from "../xpaths/ScrollPath.json";
+
 class ScrollPage extends OpenPage {
 	open () {
 		super.open('/');
@@ -21,6 +22,7 @@ class ScrollPage extends OpenPage {
 	}
 }
 
-export default new ScrollPage();`;
+export default new ScrollPage;
+`;
 
 module.exports = ScrollPageJS;

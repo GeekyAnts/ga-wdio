@@ -34,6 +34,7 @@ describe("Do login in builderx page", function () {
 
 		assert(outputTitle, outputTitle.includes(expectedTitle));
 	});
-});`;
+});
+`;
 
 module.exports = loginPageJS;

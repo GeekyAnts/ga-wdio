@@ -66,10 +66,11 @@ class Signup extends OpenPage {
 		return $(signupXpath.postalcode);
 	}
 	wrongCard(){
-        return $(signupXpath.wrongcardno);
-    }
+		return $(signupXpath.wrongcardno);
+	}
 }
 
-export default new Signup();`;
+export default new Signup;
+`;
 
 module.exports = SignUpJS;

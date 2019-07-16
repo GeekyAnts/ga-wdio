@@ -18,6 +18,8 @@ class Logout extends OpenPage {
 		return $(logoutXpath.logoutClick);
 	}
 }
-export default new Logout();`;
+
+export default new Logout;
+`;
 
 module.exports = LogoutJS;
