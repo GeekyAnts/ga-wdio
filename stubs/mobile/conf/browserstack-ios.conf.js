@@ -1,15 +1,15 @@
 const { get } = require("lodash");
 const commonJs = require("./common.conf");
 
-let confJs = {}
+let confJs = {};
 confJs.filename = "browserstack-android.conf.js";
 confJs.path = "conf";
-confJs.content = (answers) => {
-    const _commonPartial = commonJs.content(answers);
-    return `
+confJs.content = answers => {
+  const _commonPartial = commonJs.content(answers);
+  return `
   exports.config = {
-    user: "${get(answers, 'browserStack.user', '')}",
-    key: "${get(answers, 'browserStack.key', '')}",
+    user: "${get(answers, "browserStack.user", "")}",
+    key: "${get(answers, "browserStack.key", "")}",
     specs: [
         './src/test/login-test.js',
         './src/test/form-test.js',
@@ -23,6 +23,6 @@ confJs.content = (answers) => {
         'browserstack.debug': true
     }],
     ${__commonPartial}
-}`
+}`;
 };
-module.exports = confJs
+module.exports = confJs;

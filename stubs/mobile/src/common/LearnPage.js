@@ -4,8 +4,7 @@ learnPageJs.path = "src/commons";
 
 learnPageJs.filename = "LearnPage.js";
 
-learnPageJs.content =
-	`
+learnPageJs.content = `
  import Page from "./page";
  const learnAction=require('../xpath/WEB/learnPath.json');
  class LearnPage extends Page{
@@ -27,4 +26,4 @@ learnPageJs.content =
 
 }
 export default new LearnPage();`;
-module.exports = learnPageJs
+module.exports = learnPageJs;

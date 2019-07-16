@@ -1,7 +1,7 @@
 let formPathJSON = {};
 
 formPathJSON.path = "src/xpath/ios";
-formPathJSON.filename = 'formPath-json.json';
+formPathJSON.filename = "formPath-json.json";
 formPathJSON.content = `
 {
         "FORM_INPUT":"//XCUIElementTypeOther[@name='Login']",
@@ -16,4 +16,4 @@ formPathJSON.content = `
         "ALERT":"//XCUIElementTypeAlert",
         "ALERT_CONFIRM":"//XCUIElementTypeAlert[@text='This button is active']"
 }`;
-module.exports = formPathJSON
+module.exports = formPathJSON;

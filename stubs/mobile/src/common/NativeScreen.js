@@ -15,4 +15,4 @@ class NativeScreen {
     }
 }
 export default NativeScreen`;
-module.exports = nativeScreenJs
+module.exports = nativeScreenJs;

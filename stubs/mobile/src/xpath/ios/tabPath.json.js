@@ -1,7 +1,7 @@
 let signupPathJSON = {};
 
 signupPathJSON.path = "src/xpath/ios";
-signupPathJSON.filename = 'tabPath-json.json';
+signupPathJSON.filename = "tabPath-json.json";
 signupPathJSON.content = `
 {
     "HOME": "//XCUIElementTypeOther[@name='Home']",
@@ -10,4 +10,4 @@ signupPathJSON.content = `
     "FORMS": "//XCUIElementTypeOther[@name='Forms']",
     "SWIPE": "//XCUIElementTypeOther[@name='Swipe']"
 }`;
-module.exports = tabPathJSON
+module.exports = tabPathJSON;

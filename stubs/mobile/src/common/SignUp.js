@@ -1,4 +1,3 @@
-
 let signUpJs = {};
 
 signUpJs.path = "src/common";
@@ -48,4 +47,4 @@ class SignUp {
 }
 
 export default new SignUp()`;
-module.exports = signUpJs
+module.exports = signUpJs;

@@ -25,5 +25,5 @@ class TabPage {
         return $(tabXpath.SWIPE)
     }
 }
-export default new TabPage()`
-module.exports = tabPageJs
+export default new TabPage()`;
+module.exports = tabPageJs;

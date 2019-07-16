@@ -53,4 +53,4 @@ describe('SignUp test', function () {
         expect(confPasswordValidate).to.equal(validateconfPassText)
     })
 })`;
-module.exports = signUpTestJs
+module.exports = signUpTestJs;

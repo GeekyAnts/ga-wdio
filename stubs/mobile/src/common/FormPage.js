@@ -4,8 +4,7 @@ formPageJs.path = "src/common";
 
 formPageJs.filename = "FormPage.js";
 
-formPageJs.content =
-	`
+formPageJs.content = `
  import SelectClass from "../../helpers/SelectClass";
  import AppAlert from "../../helpers/AppAlert";
  import NativeScreen from "./NativeScreen";
@@ -55,4 +54,4 @@ formPageJs.content =
 }
 export default new FormPage();`;
 
-module.exports = formPageJs
+module.exports = formPageJs;

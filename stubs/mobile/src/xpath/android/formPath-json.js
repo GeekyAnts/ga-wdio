@@ -1,7 +1,7 @@
 let formPathJSON = {};
 
 formPathJSON.path = "src/xpath/android";
-formPathJSON.filename = 'formPath-json.json';
+formPathJSON.filename = "formPath-json.json";
 formPathJSON.content = `
 {
         "FORM_INPUT":"//android.widget.TextView[@text='Forms']",

@@ -22,4 +22,4 @@ describe('test the tab change of the application', () => {
         TabPage.swipe.click()
     })
 })`;
-module.exports = changeTabTestJs
+module.exports = changeTabTestJs;

@@ -1,7 +1,6 @@
-
 let packageJson = {};
 
-packageJson.filename = 'package.json';
+packageJson.filename = "package.json";
 
 packageJson.content = `{
   "name": "appium-ga-wdio",

@@ -1,7 +1,7 @@
-const {get}=require("loadash")
-let commonConfJs = {}
-commonConfJs.content = (answers) => {
-    return `
+const { get } = require("loadash");
+let commonConfJs = {};
+commonConfJs.content = answers => {
+  return `
     runner: 'local',
         framework: 'mocha',
         mochaOpts: {
@@ -10,11 +10,11 @@ commonConfJs.content = (answers) => {
             compilers: ['js:@babel/register'],
         },
         logLevel: 'info',
-        waitforTimeout: ${get(answers, 'waitTimeout', 10000)},
+        waitforTimeout: ${get(answers, "waitTimeout", 10000)},
         sync: true,
         coloredLogs: true,
-        connectionRetryTimeout: ${get(answers, 'waitTimeout', 10000)},
-        connectionRetryCount: ${get(answers, 'retryCount', 3)},
+        connectionRetryTimeout: ${get(answers, "waitTimeout", 10000)},
+        connectionRetryCount: ${get(answers, "retryCount", 3)},
         reporters: ['spec'],  
         afterTest: function (test) {
             if (!test.passed) {
@@ -25,7 +25,5 @@ commonConfJs.content = (answers) => {
             }
         },
     `;
-}
-module.exports = commonConfJs
-
-
+};
+module.exports = commonConfJs;

@@ -4,8 +4,7 @@ selectClassJs.path = "src/helpers";
 
 selectClassJs.filename = "SelectClass.js";
 
-selectClassJs.content =
-	`class SelectClass {
+selectClassJs.content = `class SelectClass {
         static _selectIos(xpath, text) {
             $(xpath).addValue(text)
         }
@@ -18,4 +17,4 @@ selectClassJs.content =
         }
     }
 
-export default SelectClass;`
+export default SelectClass;`;

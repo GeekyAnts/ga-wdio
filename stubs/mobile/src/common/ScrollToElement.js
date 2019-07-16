@@ -1,4 +1,3 @@
-
 let scrollToElementJs = {};
 
 scrollToElementJs.path = "src/common";
@@ -17,5 +16,5 @@ class ScrollToElement extends Page{
         return $('h5=Flutter');
     }
 }
-export default new ScrollToElement();`
-module.exports = scrollToElementJs
+export default new ScrollToElement();`;
+module.exports = scrollToElementJs;

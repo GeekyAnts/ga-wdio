@@ -1,7 +1,7 @@
 let signupPathJSON = {};
 
 signupPathJSON.path = "src/xpath/android";
-signupPathJSON.filename = 'signupPath-json.json';
+signupPathJSON.filename = "signupPath-json.json";
 signupPathJSON.content = `
 {
     "LOGIN": "//android.view.ViewGroup[@content-desc='Login']/android.widget.TextView",
@@ -17,4 +17,4 @@ signupPathJSON.content = `
     "VALIDATE_PASSWORD": "//android.widget.TextView[@text='Please enter at least 8 characters']",
     "VALIDATE_CONFIRM_PASSWORD": "//android.widget.TextView[@text='Please enter the same password']"
 }`;
-module.exports = signupPathJSON
+module.exports = signupPathJSON;

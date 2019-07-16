@@ -31,4 +31,4 @@ class Login extends NativeScreen{
     }
 }
 export default new Login()`;
-module.exports = loginJs
+module.exports = loginJs;

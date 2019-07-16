@@ -1,12 +1,12 @@
 const { get } = require("lodash");
 const commonJs = require("./common.conf");
 
-let confJs = {}
+let confJs = {};
 confJs.filename = "android.browser.conf.js";
 confJs.path = "conf";
-confJs.content = (answers) => {
-    const _commonPartial=commonJs.content(answers);
-    return `
+confJs.content = answers => {
+  const _commonPartial = commonJs.content(answers);
+  return `
      exports.config = {
         specs: [
             './src/test/scroll-test.js'
@@ -14,7 +14,11 @@ confJs.content = (answers) => {
         services: ['appium'],
         reporters: ['spec'],
         appium: {
-            logPath: \`${get(answers,'logPath','./store/')}\${process.env.GA_SESSION_ID}/\`,
+            logPath: \`${get(
+              answers,
+              "logPath",
+              "./store/"
+            )}\${process.env.GA_SESSION_ID}/\`,
         },
         port: 4723,
         capabilities: [{
@@ -32,8 +36,5 @@ confJs.content = (answers) => {
         ]
         ${_commonPartial}
     }`;
-
 };
-module.exports=confJs
-
-
+module.exports = confJs;

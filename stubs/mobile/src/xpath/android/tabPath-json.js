@@ -1,7 +1,7 @@
 let tabPathJSON = {};
 
 tabPathJSON.path = "src/xpath/android";
-tabPathJSON.filename = 'tabPath-json.json';
+tabPathJSON.filename = "tabPath-json.json";
 tabPathJSON.content = `{
     "HOME": "//android.view.ViewGroup[@content-desc='Home']/android.widget.TextView",
     "WEB_VIEW": "//android.view.ViewGroup[@content-desc='WebView']/android.widget.TextView",

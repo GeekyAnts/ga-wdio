@@ -1,7 +1,7 @@
 let loginPathJSON = {};
 
 loginPathJSON.path = "src/xpath/android";
-loginPathJSON.filename = 'loginPath-json.json';
+loginPathJSON.filename = "loginPath-json.json";
 loginPathJSON.content = `
 {
     "LOGIN": "//android.view.ViewGroup[@content-desc='Login']/android.widget.TextView",
@@ -10,4 +10,4 @@ loginPathJSON.content = `
     "BUTTON": "//android.view.ViewGroup[@content-desc='button-LOGIN']/android.view.ViewGroup",
     "ALERT_OK": "//android.widget.Button[@text='OK']"
 }`;
-module.exports = loginPathJSON
+module.exports = loginPathJSON;

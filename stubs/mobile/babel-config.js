@@ -1,6 +1,6 @@
 let babelConfigJS = {};
 
-babelConfigJS.filename = 'babel.config.js';
+babelConfigJS.filename = "babel.config.js";
 
 babelConfigJS.content = ` module.exports = {
     presets: [

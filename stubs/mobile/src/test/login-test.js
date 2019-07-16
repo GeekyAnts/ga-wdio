@@ -21,4 +21,4 @@ describe('Test login elements', () => {
         Login.loginAlert.click()
     })
 })`;
-module.exports = loginTestJs
+module.exports = loginTestJs;

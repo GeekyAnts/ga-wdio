@@ -1,7 +1,7 @@
 let loginPathJSON = {};
 
 loginPathJSON.path = "src/xpath/ios";
-loginPathJSON.filename = 'loginPath-json.json';
+loginPathJSON.filename = "loginPath-json.json";
 loginPathJSON.content = `
 {
     "LOGIN": "//XCUIElementTypeOther[@name='Login']",
@@ -10,4 +10,4 @@ loginPathJSON.content = `
     "BUTTON": "//XCUIElementTypeOther[@name='LOGIN']",
     "ALERT_OK": "//XCUIElementTypeStaticText[@name='LOGIN']"
 }`;
-module.exports = loginPathJSON
+module.exports = loginPathJSON;

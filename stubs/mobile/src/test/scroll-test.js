@@ -16,4 +16,4 @@ describe('builderx', function () {
         assert(elementText,'Flutter')
     });
 });`;
-module.exports = scrollTestJs
+module.exports = scrollTestJs;

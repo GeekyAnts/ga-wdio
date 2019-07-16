@@ -1,4 +1,3 @@
-
 let pageJs = {};
 
 pageJs.path = "src/common";
@@ -13,4 +12,4 @@ class Page {
     }
 }
 export default Page;`;
-module.exports = pageJs
+module.exports = pageJs;

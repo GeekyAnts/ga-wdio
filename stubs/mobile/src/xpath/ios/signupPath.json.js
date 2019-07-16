@@ -1,7 +1,7 @@
 let signupPathJSON = {};
 
 signupPathJSON.path = "src/xpath/ios";
-signupPathJSON.filename = 'signupPath-json.json';
+signupPathJSON.filename = "signupPath-json.json";
 signupPathJSON.content = `
 
 {
@@ -18,4 +18,4 @@ signupPathJSON.content = `
     "VALIDATE_PASSWORD": "//XCUIElementTypeStaticText[@name='Please enter at least 8 characters']",
     "VALIDATE_CONFIRM_PASSWORD": "//XCUIElementTypeStaticText[@name='Please enter the same password']"
 }`;
-module.exports = signupPathJSON
+module.exports = signupPathJSON;

@@ -67,4 +67,4 @@ describe('Test Form Elements', () => {
        expect(disabled).to.equal(true)
     })
 })`;
-module.exports = formTestJs
+module.exports = formTestJs;
