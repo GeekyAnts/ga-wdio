@@ -49,6 +49,7 @@ describe("Do Signup in builderx page", () => {
 		const expWrongMsg = SignUp.wrongCard().getText();
 		assert(expWrongMsg, wrongMsg);
 	});
-});`;
+});
+`;
 
 module.exports = signUpPageJS;

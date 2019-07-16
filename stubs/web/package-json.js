@@ -43,6 +43,7 @@ packageJson.content = `{
 		"wdio-video-reporter": "^1.2.4",
 		"webdriverio": "^5.6.3"
 	}
-}`;
+}
+`;
 
 module.exports = packageJson;

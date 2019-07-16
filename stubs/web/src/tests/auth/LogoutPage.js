@@ -18,6 +18,7 @@ describe("Logout the page", function () {
 		Logout.settings().click();
 		Logout.clickLogout().click();
 	});
-});`;
+});
+`;
 
 module.exports = logoutPageJS;

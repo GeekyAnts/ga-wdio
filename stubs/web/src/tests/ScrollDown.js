@@ -9,6 +9,7 @@ describe("builderx", function () {
 		ScrollPage.open();
 		ScrollPage.scrollDown();
 	});
-});`;
+});
+`;
 
 module.exports = scrollDownJS;

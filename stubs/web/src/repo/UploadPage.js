@@ -19,6 +19,7 @@ class UploadPage {
 	}
 }
 
-export default new UploadPage();`;
+export default new UploadPage;
+`;
 
 module.exports = uploadPageJS;

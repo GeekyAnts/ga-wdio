@@ -1,6 +1,6 @@
 let npmRC = {};
 
-npmRC.filename = '.npmrc';
+npmRC.filename = ".npmrc";
 
 npmRC.content = `# -----------------------------------------
 #  Settings for ChromeDriver / GeckoDriver
