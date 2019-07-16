@@ -37,6 +37,7 @@ What types of changes does your code introduce? Put an `x` in all the boxes that
 * If you're unsure about any of these, don't hesitate to ask. We're here to help!
 
 - [ ] My code follows the code style of this project.
+- [ ] Indent using Tabs size 2.
 - [ ] My change requires a change to the documentation.
 - [ ] I have updated the documentation accordingly.
 - [ ] I have read the **CONTRIBUTING** document.
