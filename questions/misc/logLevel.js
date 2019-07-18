@@ -4,6 +4,6 @@ module.exports = {
   name: "logLevel",
   message: "Log level?",
   default: "info",
-  when: _answers => (_answers.arch === "web" || _answers.arch === "mobile"),
+  when: _answers => ["web", "mobile"].includes(_answers.arch),
   choices: ["info", "warn", "debug", "error"]
 };

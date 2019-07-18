@@ -4,7 +4,8 @@ tabPageJs.path = "src/common";
 
 tabPageJs.filename = "TabPage.js";
 
-tabPageJs.content = `const tabXpath = require("../xpath/ios/tabPath.json");
+tabPageJs.content = `const xpath = require("../xpath");
+const tabXpath = xpath("tabPath.json");
 
 class TabPage {
 	get home() {

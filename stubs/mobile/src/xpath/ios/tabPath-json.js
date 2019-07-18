@@ -1,10 +1,10 @@
-let signupPathJSON = {};
+let tabPathJSON = {};
 
-signupPathJSON.path = "src/xpath/ios";
+tabPathJSON.path = "src/xpath/ios";
 
-signupPathJSON.filename = "tabPath.json";
+tabPathJSON.filename = "tabPath.json";
 
-signupPathJSON.content = `{
+tabPathJSON.content = `{
 	"HOME": "//XCUIElementTypeOther[@name='Home']",
 	"WEB_VIEW": "//XCUIElementTypeOther[@name='WebView']",
 	"LOGIN": "//XCUIElementTypeOther[@name='Login']",

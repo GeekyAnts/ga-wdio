@@ -1,5 +1,7 @@
-const { get } = require("loadash");
+const { get } = require("lodash");
+
 let commonConfJs = {};
+
 commonConfJs.content = answers => {
   return `runner: "local",
 	framework: "mocha",
@@ -21,9 +23,9 @@ commonConfJs.content = answers => {
 	afterTest: function (test) {
 		if (! test.passed) {
 			const fileName = encodeURIComponent(test.title.replace(/\s+/g, "-"))
-			const filePath = his.screenshotPath + filename + ".png";
+			const filePath = this.screenshotPath + filename + ".png";
+			
 			browser.saveScreenshot(filePath);
-			console.log("Screenshot location:", filePath, "\n");
 		}
 	},`;
 };

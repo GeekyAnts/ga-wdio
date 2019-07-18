@@ -6,7 +6,7 @@ screenshotJS.filename = "ScreenShot.js";
 
 screenshotJS.content = `class ScreenShot {
 	takeScreenshot() {
-		const filePath = \`\${process.env.GA_PROJECT_PATH}/store/screenshots/\` + Math.random() + '_.png';
+		const filePath = \`\${process.env.GA_PROJECT_PATH}/store/screenshots/\` + Math.random() + "_.png";
 		browser.saveScreenshot(filePath);
 	}
 }

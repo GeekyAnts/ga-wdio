@@ -20,7 +20,6 @@ confJs.content = answers => {
 	],
 
 	services: ["appium"],
-	reporters: ["spec"],
 	
 	appium: {
 		logPath: \`${get(answers, "logPath", "./store/")}\${process.env.GA_SESSION_ID}/\`,

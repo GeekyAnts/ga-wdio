@@ -3,7 +3,7 @@ const commonJs = require("./common.conf");
 
 let confJs = {};
 
-confJs.filename = "browserstack-android.conf.js";
+confJs.filename = "browserstack-ios.conf.js";
 
 confJs.path = "conf";
 
@@ -28,7 +28,7 @@ confJs.content = answers => {
     "browserstack.debug": true
   }],
 
-  ${__commonPartial}
+  ${_commonPartial}
 }`;
 };
 

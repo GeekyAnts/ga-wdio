@@ -6,7 +6,7 @@ appAlertJs.filename = "AppAlert.js";
 
 appAlertJs.content = `class AppAlert {
   static alertButton(xpath, value) {
-    const buttonAlert = driver.isAndroid ? xpath.concat(\`[@text='${value.toUpperCase()}']\`) : \`~${value}\`
+    const buttonAlert = driver.isAndroid ? xpath.concat(\`[@text='\${value.toUpperCase()}']\`) : \`~\${value}\`
     $(buttonAlert).click()
   }
 }

@@ -9,13 +9,13 @@ import scrollXpath from "../xpaths/ScrollPath.json";
 
 class ScrollPage extends OpenPage {
 	open () {
-		super.open('/');
+		super.open("/");
 	}
 	width () {
-		return $(scrollXpath.pageBody).getSize('width');
+		return $(scrollXpath.pageBody).getSize("width");
 	}
 	height () {
-		return $(scrollXpath.pageBody).getSize('height');
+		return $(scrollXpath.pageBody).getSize("height");
 	}
 	scrollDown () {
 		browser.touchScroll(0, this.height());

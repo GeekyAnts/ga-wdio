@@ -12,10 +12,13 @@ const expect = require("chai").expect;
 describe("Test Form Elements", () => {
 	it("should enter the text element inside the form and get the text", () => {
 		TabPage.forms.click();
+		
 		const text = "Helooo";
 		FormPage.setText(text);
+		
 		const value = FormPage.inputText.getText();
 		expect(value).to.equal(text);
+		
 		if (driver.isKeyboardShown()) {
 			driver.hideKeyboard();
 		}
@@ -23,10 +26,12 @@ describe("Test Form Elements", () => {
 
 	it("should be able to toggle the switch and get check whether switch is on or off", () => {
 		const switchOff = "Click to turn the switch OFF";
-		const switchOn="Click to turn the switch OFF";
+		const switchOn = "Click to turn the switch OFF";
 		FormPage.switchElement.click();
+
 		const firstValue = FormPage.checkSwitchValue.getText();
 		expect(firstValue).to.equal(switchOff);
+		
 		const secondValue = FormPage.checkSwitchValue.getText();
 		expect(secondValue).to.equal(switchOn);
 	});

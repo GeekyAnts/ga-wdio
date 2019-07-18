@@ -12,6 +12,13 @@ const checkIfExist = (_path, _what) => {
 	}
 };
 
+const appiumDoctor = () => {
+	const _path = path.join(process.env.GA_PROJECT_PATH, "node_modules/.bin/appium-doctor")
+	checkIfExist(_path, "node_modules");
+
+	return _path;
+};
+
 const npm = () => {
 	const _path = path.join(process.env.GA_PROJECT_PATH, "node_modules");
 	checkIfExist(_path, "node_modules");
@@ -22,6 +29,7 @@ const npm = () => {
 const wdio = () => {
 	const _path = `${npm()}/.bin/wdio`;
 	checkIfExist(_path, "WebDriverIO");
+
 	return _path;
 };
 
@@ -75,6 +83,7 @@ const apiRepo = () => {
 };
 
 module.exports = {
+	appiumDoctor,
 	shutDown,
 	checkIfExist,
 	npm,

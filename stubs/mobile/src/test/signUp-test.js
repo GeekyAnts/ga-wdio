@@ -19,6 +19,7 @@ describe("SignUp test", () => {
 		const validateEmailText = "Please enter a valid email address";
 		const validatePasswordText = "Please enter at least 8 characters";
 		const validateconfPassText = "Please enter the same password";
+
 		SignUp.email.setValue("");
 		SignUp.password.setValue("");
 		SignUp.confirmPassword.setValue("");
@@ -28,6 +29,7 @@ describe("SignUp test", () => {
 		}
 
 		SignUp.signupButton.click();
+		
 		const failureValue = SignUp.failureAlert.getText();
 		SignUp.tryAgainButton("Try again");
 
@@ -44,6 +46,7 @@ describe("SignUp test", () => {
 	it("should show alert and get validation message when confirm password is not entered", function () {
 		const failureText = "Failure";
 		const validateconfPassText = "Please enter the same password";
+		
 		SignUp.email.setValue("test@webdriver.io");
 		SignUp.password.setValue("Test1234!");
 		SignUp.confirmPassword.setValue("");
@@ -53,8 +56,10 @@ describe("SignUp test", () => {
 		}
 
 		SignUp.signupButton.click();
+		
 		const failureValue = SignUp.failureAlert.getText();
 		SignUp.tryAgainButton("Try again");
+		
 		const confPasswordValidate = SignUp.vaildConfirmPassword.getText();
 		expect(failureValue).to.equal(failureText);
 		expect(confPasswordValidate).to.equal(validateconfPassText);

@@ -3,7 +3,7 @@ const commonJs = require("./common.conf");
 
 let confJs = {};
 
-confJs.filename = "android.browser.conf.js";
+confJs.filename = "ios.browser.conf.js";
 
 confJs.path = "conf";
 
@@ -16,7 +16,6 @@ confJs.content = answers => {
 	],
 	
 	services: ["appium"],
-	reporters: ["spec"],
 	
 	appium: {
 		logPath: \`${get(answers, "logPath", "./store/")}\${process.env.GA_SESSION_ID}/\`,
@@ -25,9 +24,9 @@ confJs.content = answers => {
 	port: 4723,
 	
 	capabilities: [{
-		deviceName: "iPhone X",
+		deviceName: "\`\${process.env.IOS_DEVICENAME}\`",
 		platformName: "iOS",
-		platformVersion: "12.1",
+		platformVersion: "\`\${process.env.IOS_PLATFORMVERSION}\`",
 		orientation: "PORTRAIT",
 		maxInstances: 1,
 		browserName: "safari",

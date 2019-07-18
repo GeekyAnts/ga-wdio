@@ -1,11 +1,13 @@
 let learnPageJs = {};
 
-learnPageJs.path = "src/commons";
+learnPageJs.path = "src/common";
 
 learnPageJs.filename = "LearnPage.js";
 
 learnPageJs.content = `import Page from "./page";
-const learnAction = require("../xpath/WEB/learnPath.json");
+
+const xpath = require("../xpath");
+const learnAction = xpath("learnPath.json");
 
 class LearnPage extends Page {
 	open() {

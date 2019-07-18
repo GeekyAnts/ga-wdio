@@ -9,7 +9,7 @@ selectClassJs.content = `class SelectClass {
 		$(xpath).addValue(text)
 	}
 	static _selectAndroid(xpath, text) {
-		$(\`${xpath}/*[@text='${text}']\`).click()
+		$(\`\${xpath}/*[@text='\${text}']\`).click()
 	}
 	static selectDropdown(xpath, text) {
 		const selector = driver.isIOS ? this._selectIos(xpath, text) : this._selectAndroid(xpath, text)

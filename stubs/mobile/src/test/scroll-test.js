@@ -10,8 +10,10 @@ const assert = require("assert");
 describe("builderx", () => {
 	it("scroll to flutter  ", () => {
 		const elementText = ScrollToElement.scrollUntilFound();
+		
 		ScrollToElement.open();
 		ScrollToElement.scrollUntilFound().scrollIntoView();
+		
 		assert(elementText, "Flutter");
 	});
 });

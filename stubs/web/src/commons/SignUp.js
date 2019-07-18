@@ -21,7 +21,7 @@ class Signup extends OpenPage {
 		return $(signupXpath.password);
 	}
 	seats () {
-		return $(signupXpath.seats)
+		return $(signupXpath.seats);
 	}
 	confirmPassword () {
 		return $(signupXpath.confirmpassword);

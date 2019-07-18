@@ -7,7 +7,8 @@ loginJs.filename = "Login.js";
 loginJs.content = `import NativeScreen from "./NativeScreen.js";
 import TabPage from "./TabPage.js";
 
-const loginXpath = require("../xpath/ios/loginPath.json");
+const xpath = require("../xpath");
+const loginXpath = xpath("loginPath.json");
 
 class Login extends NativeScreen {
 	constructor() {

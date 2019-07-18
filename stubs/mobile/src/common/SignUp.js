@@ -5,7 +5,9 @@ signUpJs.path = "src/common";
 signUpJs.filename = "SignUp.js";
 
 signUpJs.content = `import AppAlert from "../../helpers/AppAlert.js";
-const signupXpath = require("../xpath/ios/signupPath.json");
+
+const xpath = require("../xpath");
+const signupXpath = xpath("signupPath.json");
 
 class SignUp {
 	get signupField() {

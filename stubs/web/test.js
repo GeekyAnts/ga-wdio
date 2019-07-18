@@ -5,20 +5,20 @@ testJS.filename = 'test.js';
 testJS.content = `const { remote } = require('webdriverio');
 
 (async () => {
-    const browser = await remote({
-        logLevel: 'error',
-        path: '/',
-        capabilities: {
-            browserName: 'firefox'
-        }
-    });
+	const browser = await remote({
+		logLevel: 'error',
+		path: '/',
+		capabilities: {
+			browserName: 'firefox'
+		}
+	});
 
-    await browser.url('https://webdriver.io');
+	await browser.url('https://webdriver.io');
 
-    const title = await browser.getTitle();
-    console.log('Title was: ' + title);
+	const title = await browser.getTitle();
+	console.log('Title was: ' + title);
 
-    await browser.deleteSession();
+	await browser.deleteSession();
 })().catch((e) => console.error(e));
 `;
 

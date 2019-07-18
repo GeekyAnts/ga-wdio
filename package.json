@@ -23,6 +23,7 @@
     "npm": ">=6.8.0"
   },
   "dependencies": {
+    "appium-doctor": "^1.11.1",
     "chai": "^4.2.0",
     "chromedriver": "^73.0.0",
     "colors": "^1.3.3",

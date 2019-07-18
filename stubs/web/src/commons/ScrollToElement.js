@@ -9,7 +9,7 @@ import scrollElement from "../xpaths/ScrollToXpath.json";
 
 class ScrollToElement extends OpenPage {
 	open () {
-		super.open('/');
+		super.open("/");
 	}
 	scrollUntilFound () {
 		return $(scrollElement.scrollTo);

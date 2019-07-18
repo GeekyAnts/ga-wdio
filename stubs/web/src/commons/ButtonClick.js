@@ -8,7 +8,7 @@ buttonClickJS.content = `import OpenPage from "./OpenPage";
 
 class ButtonClick extends OpenPage {
 	open () {
-		super.open('/');
+		super.open("/");
 	}
 }
 

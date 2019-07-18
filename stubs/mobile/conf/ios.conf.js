@@ -3,7 +3,7 @@ const commonJs = require("./common.conf");
 
 let confJs = {};
 
-confJs.filename = "android.conf.js";
+confJs.filename = "ios.conf.js";
 
 confJs.path = "conf";
 
@@ -18,7 +18,7 @@ confJs.content = answers => {
 	],
 	
 	services: ["appium"],
-	reporters: ["spec"],
+
 	appium: {
 		logPath: \`${get(answers, "logPath", "./store/")}\${process.env.GA_SESSION_ID}/\`,
 	},
@@ -26,17 +26,17 @@ confJs.content = answers => {
 	port: 4723,
 	capabilities: [{
 		maxInstances: 1,
-		deviceName: "iPhone X",
+		deviceName: "\`\${process.env.IOS_DEVICENAME}\`",
 		platformName: "iOS",
 		app:  "${get(answers, "app", "")}",
-		platformVersion: "${get(answers, "platformVersion", "")}",
+		platformVersion: "\`\${process.env.IOS_PLATFORMVERSION}\`",
 		orientation: "PORTRAIT",
 		noReset: true,
 		automationName: "XCUITest",
 		useNewWDA: true,
 		waitForQuiescence: false,
 		newCommandTimeout: 240,
-		udid: "${get(answers, "udid", "")}",
+		udid: "\`\${process.env.IOS_UDID}\`",
 	}],
 	
 	${_commonPartial}

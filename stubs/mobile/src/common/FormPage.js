@@ -9,7 +9,8 @@ import AppAlert from "../../helpers/AppAlert";
 import NativeScreen from "./NativeScreen";
 import TabPage from "./TabPage";
 
-const formXpath = require("../xpath/ios/formPath.json");
+const xpath = require("../xpath");
+const formXpath = xpath("formPath.json");
 
 class FormPage extends NativeScreen {
 	constructor() {

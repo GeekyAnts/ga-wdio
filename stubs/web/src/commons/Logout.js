@@ -9,7 +9,7 @@ import logoutXpath from "../xpaths/LogoutPath.json";
 
 class Logout extends OpenPage {
 	open() {
-		super.open("login")
+		super.open("login");
 	}
 	settings() {
 		return $(logoutXpath.settings);
