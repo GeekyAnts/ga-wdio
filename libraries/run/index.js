@@ -1,11 +1,34 @@
 const colors = require("colors");
+const _ios = require("./mobile/ios");
 const { initAPIs } = require("./api");
 const { local } = require("./web/local");
+const _android = require("./mobile/android");
+const { mobileDotEnv } = require("../helpers/path");
 const browserStack = require("./web/browser-stack");
 const { clearConsole, bgGreenBlack } = require("../helpers/terminal");
-const { _android, _ios } = require("../run");
+
+const ios = async (_options) => {	
+	mobileDotEnv();
+
+	const { 
+		platform, browser, stack, udid, deviceName, platformVersion
+	} = _options;
+
+	clearConsole();
+
+	bgGreenBlack(`Storage folder ==> ${process.env.GA_SESSION_ID}/\n`);
+	
+	const options = {
+		udid, stack, deviceName, 
+		browser, platformVersion
+	};
+
+	return await _ios.init(options);
+};
 
 const android = async (_options) => {
+	mobileDotEnv();
+
 	const { 
 		platform, browser, stack
 	} = _options;
@@ -20,29 +43,6 @@ const android = async (_options) => {
 	};
 	
 	return await _android.init(options);
-};
-
-const ios = async (_options) => {
-	const { 
-		platform, browser, stack
-	} = _options;
-
-	clearConsole();
-
-	bgGreenBlack(`Storage folder ==> ${process.env.GA_SESSION_ID}/\n`);
-	
-	const options = {
-		browser,
-		stack
-	};
-
-	console.log(">> Browser:", browser);
-	console.log(">> Stack:", stack);
-	console.log(">> UDID:", udid);
-	console.log(">> Device Name:", deviceName);
-	console.log(">> Platform Version:", platformVersion);
-	
-	// return await _ios.init(options);
 };
 
 const web = async (_options) => {

@@ -13,6 +13,9 @@ bootstrap.version(packageJson.version);
 // Boots the creator
 bootstrap.create();
 
+// Boots the uploader
+bootstrap.upload();
+
 // Boots the checker
 bootstrap.check();
 

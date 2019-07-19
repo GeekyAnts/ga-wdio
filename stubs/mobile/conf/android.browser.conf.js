@@ -24,9 +24,9 @@ confJs.content = answers => {
 	port: 4723,
 
 	capabilities: [{
-		deviceName: "pixel 2",
-		platformName: "Android",
-		platformVersion: "8.1.0",
+		deviceName: \`\${process.env.ANDROID_DEVICENAME}\`,
+		platformName: \`\${process.env.ANDROID_PLATFORMNAME}\`,
+		platformVersion: \`\${process.env.ANDROID_PLATFORVERSION}\`,
 		maxInstances: 1,
 		browserName: "chrome",
 		chromedriverExecutable: "/your/path/for/chromedriver",

@@ -24,12 +24,12 @@ confJs.content = answers => {
 	port: 4723,
 	
 	capabilities: [{
-		deviceName: "\`\${process.env.IOS_DEVICENAME}\`",
-		platformName: "iOS",
-		platformVersion: "\`\${process.env.IOS_PLATFORMVERSION}\`",
-		orientation: "PORTRAIT",
+		deviceName: \`\${process.env.IOS_DEVICENAME}\`,
+		platformName: \`\${process.env.IOS_PLATFORMNAME}\`,
+		platformVersion: \`\${process.env.IOS_PLATFORMVERSION}\`,
+		orientation: \`\${process.env.IOS_ORIENTATION}\`,
 		maxInstances: 1,
-		browserName: "safari",
+		browserName: \`\${process.env.IOS_BROWSERNAME}\`,
 		newCommandTimeout: 240,
 	}],
 

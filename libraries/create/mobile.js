@@ -3,7 +3,7 @@ const {
 } = require("../helpers/designer");
 
 const {
-	packageJson, babelConfigJs,
+	packageJson, babelConfigJs, envJS,
 
 	androidConfJs, iosConfJs, browserStackAndroidConfJs, 
 	browserStackIosConfJs, browserAndroidConfJs, browserIosConfJs,
@@ -142,6 +142,7 @@ mobile.generateFiles = async (_answers) => {
 	// Create root directory files...
 	await createFileWithContent(`./${_answers.appName}`, packageJson.filename, packageJson.content);
 	await createFileWithContent(`./${_answers.appName}`, babelConfigJs.filename, babelConfigJs.content);
+	await createFileWithContent(`./${_answers.appName}`, envJS.filename, envJS.content);
 };
 
 module.exports = mobile;

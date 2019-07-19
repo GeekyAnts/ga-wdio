@@ -3,6 +3,7 @@ const { create } = require("../create");
 const doctor = require("../appium/doctor");
 const { web, api, ios, android } = require("../run");
 const { makeRed } = require("../helpers/colors");
+const upload = require("../upload");
 
 // Instance...
 const bootstrap = {};
@@ -60,9 +61,9 @@ bootstrap.run = () => {
 		.description("[For Mobile] Runs the testing scripts on iOS platform")
 		.option("-b, --browser <true>", "enables the mobile's browser testing", "false")
 		.option("-s, --stack <browser-stack>", "runs your tests on environments like browser-stack or local simulator", "local")
-		.option("-u, --udid", "simulator's Device ID", "")
-		.option("-n, --deviceName", "simulator's Device Name", "")
-		.option("-p, --platformVersion", "simulator's Platform Version", "")
+		.option("-u, --udid <XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX>", "simulator's Device ID")
+		.option("-n, --deviceName <iPhone Xr>", "simulator's Device Name")
+		.option("-p, --platformVersion <12.2>", "simulator's Platform Version")
 		.on("--help", () => {
 			console.log("");
 			console.log("Examples:");
@@ -93,6 +94,23 @@ bootstrap.check = () => {
 		.command("check:appium")
 		.description("[For Mobile] Checks the necessary & optional dependencies for appium")
 		.action(doctor);
+};
+
+// Runs the uploads...
+bootstrap.upload = () => {
+	program
+		.command("upload:app")
+		.description("Uploads IPA or APK file to browser stack & returns the app url with custom ID")
+		.option("-f, --file </path/to/file>", "runs your tests on the local system or browser-stack") 
+		.option("-u, --username <username>", "browser-stack username")
+		.option("-p, --password <password>", "browser-stack password")
+		.option("-c, --customId <MyApp>", "your custom ID for the app")
+		.on("--help", () => {
+			console.log("");
+			console.log("Examples:");
+			console.log("  ga-wdio upload:app --file=/path/to/file --username=faizahmed --password=somethingsecret --customId=MyApp");
+		})
+		.action(upload.app);
 };
 
 // Handles the arguements / options

@@ -22,9 +22,9 @@ confJs.content = answers => {
   ],
 
   capabilities: [{
-    device: "iPhone 7",
+    device: \`\${process.env.IOS_BS_DEVICE}\`,
     "realMobile": true,
-    app: "appUrl",
+    app: \`\${process.env.IOS_BS_APPURL}\`,
     "browserstack.debug": true
   }],
 

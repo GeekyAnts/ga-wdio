@@ -26,17 +26,17 @@ confJs.content = answers => {
 	port: 4723,
 	capabilities: [{
 		maxInstances: 1,
-		deviceName: "\`\${process.env.IOS_DEVICENAME}\`",
-		platformName: "iOS",
-		app:  "${get(answers, "app", "")}",
-		platformVersion: "\`\${process.env.IOS_PLATFORMVERSION}\`",
-		orientation: "PORTRAIT",
+		deviceName: \`\${process.env.IOS_DEVICENAME}\`,
+		platformName: \`\${process.env.IOS_PLATFORMNAME}\`,
+		app:  \`\${process.env.IOS_APP}\`,
+		platformVersion: \`\${process.env.IOS_PLATFORMVERSION}\`,
+		orientation: \`\${process.env.IOS_ORIENTATION}\`,
 		noReset: true,
 		automationName: "XCUITest",
 		useNewWDA: true,
 		waitForQuiescence: false,
 		newCommandTimeout: 240,
-		udid: "\`\${process.env.IOS_UDID}\`",
+		udid: \`\${process.env.IOS_UDID}\`,
 	}],
 	
 	${_commonPartial}

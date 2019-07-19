@@ -1,6 +1,7 @@
 module.exports = {
   packageJson: require("./package-json"),
   babelConfigJs: require("./babel-config"),
+  envJS: require("./env"),
 
   // conf ...
   androidConfJs: require("./conf/android.conf"),

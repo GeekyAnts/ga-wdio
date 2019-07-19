@@ -29,11 +29,11 @@ confJs.content = answers => {
 
 	capabilities: [{
 		maxInstances: 1,
-		appPackage: "com.wdiodemoapp",
-		appActivity: "com.wdiodemoapp.MainActivity",
-		deviceName: "pixel 2",
-		platformName: "Android",
-		app: "your app path",
+		appPackage: \`\${process.env.ANDROID_APPPACKAGE}\`,
+		appActivity: \`\${process.env.ANDROID_APPACTIVITY}\`,
+		deviceName: \`\${process.env.ANDROID_DEVICENAME}\`,
+		platformName: \`\${process.env.ANDROID_PLATFORMNAME}\`,
+		app: \`\${process.env.ANDROID_APPID}\`,
 	}],
 
 	${_commonPartial}

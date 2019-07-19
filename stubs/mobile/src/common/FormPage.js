@@ -4,8 +4,8 @@ formPageJs.path = "src/common";
 
 formPageJs.filename = "FormPage.js";
 
-formPageJs.content = `import SelectClass from "../../helpers/SelectClass";
-import AppAlert from "../../helpers/AppAlert";
+formPageJs.content = `import SelectClass from "../helpers/SelectClass";
+import AppAlert from "../helpers/AppAlert";
 import NativeScreen from "./NativeScreen";
 import TabPage from "./TabPage";
 

@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const dotenv = require("dotenv");
 
 const shutDown = (_msg) => {
 	console.log("\n?".green, "[Error]:".red, `${_msg}\n`.green);
@@ -10,6 +11,17 @@ const checkIfExist = (_path, _what) => {
 	if (! fs.existsSync(_path)) {
 		shutDown(`${_what} does not exists.`);
 	}
+};
+
+const mobileDotEnv = () => {
+	const _path = path.join(process.env.GA_PROJECT_PATH, ".env");
+	checkIfExist(_path, ".env is missing from the project's root directory!");
+
+	dotenv.config({
+		path: _path
+	});
+	
+	return _path;
 };
 
 const appiumDoctor = () => {
@@ -82,6 +94,48 @@ const apiRepo = () => {
 	return _path;
 };
 
+const iosConf = () => {
+	const _path = path.join(process.env.GA_PROJECT_PATH, "conf/ios.conf.js");
+	checkIfExist(_path, "iOS conf");
+
+	return _path;
+};
+
+const iosBrowserConf = () => {
+	const _path = path.join(process.env.GA_PROJECT_PATH, "conf/ios.browser.conf.js");
+	checkIfExist(_path, "iOS Browser conf");
+
+	return _path;
+};
+
+const iosBrowserStackConf = () => {
+	const _path = path.join(process.env.GA_PROJECT_PATH, "conf/browserstack-ios.conf.js");
+	checkIfExist(_path, "Browser-Stack iOS conf");
+
+	return _path;
+};
+
+const androidConf = () => {
+	const _path = path.join(process.env.GA_PROJECT_PATH, "conf/android.conf.js");
+	checkIfExist(_path, "Android conf");
+
+	return _path;
+};
+
+const androidBrowserConf = () => {
+	const _path = path.join(process.env.GA_PROJECT_PATH, "conf/android.browser.conf.js");
+	checkIfExist(_path, "Android Browser conf");
+
+	return _path;
+};
+
+const androidBrowserStackConf = () => {
+	const _path = path.join(process.env.GA_PROJECT_PATH, "conf/browserstack-android.conf.js");
+	checkIfExist(_path, "Browser-Stack Android conf");
+
+	return _path;
+};
+
 module.exports = {
 	appiumDoctor,
 	shutDown,
@@ -94,5 +148,12 @@ module.exports = {
 	chromeHeadlessPath: chromeHeadless,
 	geckoHeadlessPath: geckoHeadless,
 	browserStackPath: browserStack,
-	browserStackLocalPath: browserStackLocal
+	browserStackLocalPath: browserStackLocal,
+	iosConf,
+	iosBrowserConf,
+	iosBrowserStackConf,
+	androidConf,
+	androidBrowserConf,
+	androidBrowserStackConf,
+	mobileDotEnv
 };

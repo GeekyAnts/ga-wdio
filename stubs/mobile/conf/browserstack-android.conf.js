@@ -24,9 +24,9 @@ confJs.content = answers => {
   ],
 
   capabilities: [{
-    device: 'OnePlus 6T',
-    name: 'single_test',
-    app: 'appUrl',
+    device: \`\${process.env.ANDROID_BS_DEVICE}\`,
+    name: \`\${process.env.ANDROID_BS_NAME}\`,
+    app: \`\${process.env.ANDROID_BS_APPURL}\`,
     'browserstack.debug': true,
     gpsEnabled: true,
     autoGrantPermissions: true
