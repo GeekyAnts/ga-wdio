@@ -61,9 +61,6 @@ bootstrap.run = () => {
 		.description("[For Mobile] Runs the testing scripts on iOS platform")
 		.option("-b, --browser <true>", "enables the mobile's browser testing", "false")
 		.option("-s, --stack <browser-stack>", "runs your tests on environments like browser-stack or local simulator", "local")
-		.option("-u, --udid <XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX>", "simulator's Device ID")
-		.option("-n, --deviceName <iPhone Xr>", "simulator's Device Name")
-		.option("-p, --platformVersion <12.2>", "simulator's Platform Version")
 		.on("--help", () => {
 			console.log("");
 			console.log("Examples:");
