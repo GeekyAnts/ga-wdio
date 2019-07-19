@@ -15,6 +15,7 @@ npm install -g ga-wdio
 - [Usage](https://github.com/GeekyAnts/ga-wdio/wiki/Usage)
 - [Architecture for Web](https://github.com/GeekyAnts/ga-wdio/wiki/Web-Architecture)
 - [Architecture for API](https://github.com/GeekyAnts/ga-wdio/wiki/API-Architecture)
+- [Architecture for Mobile](https://github.com/GeekyAnts/ga-wdio/wiki/Mobile-Architecture)
 
 ## Support:
 
