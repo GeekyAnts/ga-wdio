@@ -2,6 +2,19 @@
 
 An automation CLI tool that creates the tests project for Web, API & Mobile apps and runs things like geckodriver, chromedriver & appium internally for various stacks, browsers & modes.
 
+## Features:
+
+* Supports Web App Testing
+* Supports API Testing
+* Supports iOS & Android Mobile App Testing
+* Supports iOS & Android Mobile Browser Testing
+* Supports Browser Stack cloud environment for Web & Mobile Testing
+* CLI command to 
+	* create the boilerplate
+	* run the test cases
+	* check the appium's necessary & optional dependencies on the system
+	* upload the mobile APK or IPA to the browser-stack cloud
+
 ## Installation:
 
 ```sh
