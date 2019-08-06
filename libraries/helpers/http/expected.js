@@ -1,6 +1,9 @@
+
 const { expect } = require("chai");
 const traverse = require("traverse");
-const { get, map, xor, difference } = require("lodash");
+const { get, map, xor, difference, isEmpty } = require("lodash");
+
+var GlobalStore = require("../../run/api/store");
 
 let expected = {};
 
@@ -54,7 +57,7 @@ expected.init = async (_expected, _response) => {
 		const _data = value.join(".");
 		const _iterator = get(_expected.body, _data);
 
-		if (typeof _data !== 'object' && value.length > 0) {
+		if (typeof _data !== "object" && value.length > 0) {
 			expectedTree.push(_data);
 		}
 	});
@@ -64,7 +67,7 @@ expected.init = async (_expected, _response) => {
 		const _data = value.join(".");
 		const _iterator = get(body, _data);
 
-		if (typeof _data !== 'object' && value.length > 0) {
+		if (typeof _data !== "object" && value.length > 0) {
 			responseTree.push(_data);
 		}
 	});
@@ -74,12 +77,21 @@ expected.init = async (_expected, _response) => {
 		
 		isSomethingLeft.map(_value => {
 			let _u = [];
-			_u['key'] = _value;
-			_u['value'] = `'${_value}' index is missing from the response!`;
+			_u["key"] = _value;
+			_u["value"] = `'${_value}' index is missing from the response!`;
 
 			_errors.body.push(_u);
 		});
 	}
+
+	if (_expected.hasOwnProperty('store') && !isEmpty(_expected.store)) {
+    for (const iterator in _expected.store) {
+      let _iterator = get(_expected.store, iterator, undefined);
+			if (_iterator) _iterator = _iterator.replace("body.", "");
+
+			GlobalStore.modules.set(iterator, get(body, _iterator));
+    }
+  }
 
 	return _errors;
 };

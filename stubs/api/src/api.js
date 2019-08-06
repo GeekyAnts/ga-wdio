@@ -19,6 +19,8 @@ api.apis = [
 	single
 ];
 
+api.store = require("./libraries/store");
+
 module.exports = api;
 `;
 

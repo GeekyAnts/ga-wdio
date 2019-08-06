@@ -36,6 +36,7 @@ single.expected = {
 	headers: {
 		"Content-Type": "string"
 	},
+
 	body: {
 		"data": {
 			"id": "number",
@@ -45,6 +46,16 @@ single.expected = {
 			"last_name": "string",
 			"avatar": "string"
 		}
+	},
+
+	// Meaning we want to keep the response object's
+	// "email" into our store for further use.
+	// 
+	// To use this variable now, you can call the variable 
+	// as "[email]" in headers or body of the request.
+	//
+	store: {
+		email: "body.data.email"
 	}
 };
 

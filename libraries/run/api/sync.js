@@ -1,3 +1,5 @@
+
+const { isEmpty } = require("lodash");
 const terminal = require("../../helpers/terminal");
 const request = require("../../helpers/http/request");
 const expected = require("../../helpers/http/expected");
@@ -6,7 +8,13 @@ const { buildRequest } = require("../../helpers/http/api");
 let sync = {};
 
 sync.start = async (_app) => {
+	var GlobalStore = require("./store");
+	
 	terminal.centeredHeading("GA-WDIO Test Report".bold);
+
+	if (_app.hasOwnProperty("store") && !isEmpty(_app.store)) {
+		GlobalStore.override(_app.store);
+	}
 
 	for (const _api of _app.apis) {
 		const options = await buildRequest(_app.domains, _api);
