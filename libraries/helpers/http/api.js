@@ -4,7 +4,8 @@ const { shutDown } = require("../path");
 let helpers = {};
 
 helpers.buildRequest = async (_domains, _api) => {
-	const _uri = get(_api, "uri", undefined).replace(/^\/|\/$/g, '');
+	let _uri = get(_api, "uri", undefined);
+	if (! _uri) _uri = _uri.replace(/^\/|\/$/g, '');
 	
 	if (_api.domain !== undefined && _domains[_api.domain] === undefined) {
 		shutDown(`Domain index provided '${_api.domain}' does not exist in App's domains list!`);
@@ -21,7 +22,7 @@ helpers.buildRequest = async (_domains, _api) => {
 
 	const _data = get(
 		_api, 
-		includes(_method, ["POST", "PUT", "PATCH"]) ? "data" : "query", 
+		includes(["POST", "PUT", "PATCH"], _method) ? "body" : "query", 
 		{}
 	);
 
