@@ -12,10 +12,10 @@ upload.app = async (_options) => {
 		file, username, password, customId
 	} = _options;
 
-	exist (file, "--file is required field");
-	exist (username, "--username is required field");
-	exist (password, "--password is required field");
-	exist (customId, "--customId is required field");
+	exist(file, "--file is required field");
+	exist(username, "--username is required field");
+	exist(password, "--password is required field");
+	exist(customId, "--customId is required field");
 
 	checkIfExist(file, "Given file");
 
@@ -25,7 +25,7 @@ upload.app = async (_options) => {
 };
 
 upload.curl = async (_command) => {
-	const { stdout, stderr } = await exec(_command, {stdio: 'inherit'});
+	const { stdout, stderr } = await exec(_command, { stdio: 'inherit' });
 
 	drawLine();
 

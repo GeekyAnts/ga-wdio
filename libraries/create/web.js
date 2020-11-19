@@ -5,12 +5,12 @@ const {
 const {
 	packageJson, babelConfigJS, testJS, npmRc, screenshotJS,
 	browserStackConfJS, chromeHeadlessConfJS, chromeConfJS,
-	geckoConfJS, geckoHeadlessConfJS, localConfJS, uploadPageJS, 
-	formPageJS, buttonClickJS, openPageJS, loginJS, loginPathJSON, 
-	scrollPageJS, scrollToElementJS, signUpJS, uploadImageJS, 
-	signupPathJSON, uploadPhotoJSON, scrollDownJS,	scrollTillJS,	
-	singleTestJS, loginPageJS,	signUpPageJS, logoutJS, learnDocsJS,
-	logoutPageJS, learnPageJS, learnPathJSON, logoutPathJSON, 
+	geckoConfJS, geckoHeadlessConfJS, localConfJS, uploadPageJS,
+	formPageJS, buttonClickJS, openPageJS, loginJS, loginPathJSON,
+	scrollPageJS, scrollToElementJS, signUpJS, uploadImageJS,
+	signupPathJSON, uploadPhotoJSON, scrollDownJS, scrollTillJS,
+	singleTestJS, loginPageJS, signUpPageJS, logoutJS, learnDocsJS,
+	logoutPageJS, learnPageJS, learnPathJSON, logoutPathJSON,
 	scrollPathJSON, scrollToXpathJSON
 } = require("../../stubs/web");
 
@@ -71,19 +71,19 @@ web.generateFolders = async (_appName) => {
 // Create conf file and write content...
 web.generateFiles = async (_answers) => {
 	let _content = '';
-	
+
 	// Create Conf files...	
 	_content = chromeConfJS.content(_answers);
 	await createFileWithContent(`./${_answers.appName}/${chromeConfJS.path}`, chromeConfJS.filename, _content);
-	
+
 	_content = localConfJS.content(_answers);
 	await createFileWithContent(`./${_answers.appName}/${localConfJS.path}`, localConfJS.filename, _content);
-	
+
 	_content = geckoConfJS.content(_answers);
 	await createFileWithContent(`./${_answers.appName}/${geckoConfJS.path}`, geckoConfJS.filename, _content);
-	
+
 	_content = browserStackConfJS.content(_answers);
-	await createFileWithContent(`./${_answers.appName}/${browserStackConfJS.path}`, browserStackConfJS.filename, _content);	
+	await createFileWithContent(`./${_answers.appName}/${browserStackConfJS.path}`, browserStackConfJS.filename, _content);
 
 	_content = geckoHeadlessConfJS.content(_answers);
 	await createFileWithContent(`./${_answers.appName}/${geckoHeadlessConfJS.path}`, geckoHeadlessConfJS.filename, _content);
@@ -96,16 +96,16 @@ web.generateFiles = async (_answers) => {
 
 	// Create package.json file...
 	await createFileWithContent(`./${_answers.appName}`, packageJson.filename, packageJson.content);
-	
+
 	// Create .npmrc file...
 	await createFileWithContent(`./${_answers.appName}`, npmRc.filename, npmRc.content);
 
 	// Create babel.config.js file...
 	await createFileWithContent(`./${_answers.appName}`, babelConfigJS.filename, babelConfigJS.content);
-	
+
 	// Create test.js file...
 	await createFileWithContent(`./${_answers.appName}`, testJS.filename, testJS.content);
-	
+
 	// Create commons files...
 	await createFileWithContent(`./${_answers.appName}/${buttonClickJS.path}`, buttonClickJS.filename, buttonClickJS.content);
 	await createFileWithContent(`./${_answers.appName}/${loginJS.path}`, loginJS.filename, loginJS.content);

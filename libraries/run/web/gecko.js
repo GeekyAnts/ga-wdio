@@ -13,7 +13,7 @@ gecko.init = async (_mode) => {
 	const _conf = (_mode === 'headless') ? geckoHeadlessPath() : geckoPath();
 
 	geckodriver.start(args);
-	
+
 	executor
 		.init(_conf)
 		.then(code => geckodriver.stop());

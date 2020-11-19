@@ -14,7 +14,7 @@ chrome.init = async (_mode) => {
 	const _conf = (_mode === 'headless') ? chromeHeadlessPath() : chromePath();
 
 	chromedriver.start(args, false);
-	
+
 	executor
 		.init(_conf)
 		.then(code => chromedriver.stop());

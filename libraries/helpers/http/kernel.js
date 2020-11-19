@@ -1,5 +1,5 @@
-const { 
-	successResponse, failureResponse 
+const {
+	successResponse, failureResponse
 } = require("./kernel");
 
 const kernel = async (_response) => {

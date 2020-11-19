@@ -7,19 +7,19 @@ const { mobileDotEnv } = require("../helpers/path");
 const browserStack = require("./web/browser-stack");
 const { clearConsole, bgGreenBlack } = require("../helpers/terminal");
 
-const ios = async (_options) => {	
+const ios = async (_options) => {
 	mobileDotEnv();
 
-	const { 
+	const {
 		platform, browser, stack, udid, deviceName, platformVersion
 	} = _options;
 
 	clearConsole();
 
 	bgGreenBlack(`Storage folder ==> ${process.env.GA_SESSION_ID}/\n`);
-	
+
 	const options = {
-		udid, stack, deviceName, 
+		udid, stack, deviceName,
 		browser, platformVersion
 	};
 
@@ -29,19 +29,19 @@ const ios = async (_options) => {
 const android = async (_options) => {
 	mobileDotEnv();
 
-	const { 
+	const {
 		platform, browser, stack
 	} = _options;
 
 	clearConsole();
 
 	bgGreenBlack(`Storage folder ==> ${process.env.GA_SESSION_ID}/\n`);
-	
+
 	const options = {
 		browser,
 		stack
 	};
-	
+
 	return await _android.init(options);
 };
 
@@ -55,7 +55,8 @@ const web = async (_options) => {
 	switch (stack) {
 		case 'browser-stack-local':
 			await browserStack.local();
-		case 'browser-stack': 
+			break;
+		case 'browser-stack':
 			await browserStack.init();
 			break;
 		case 'local':
@@ -66,7 +67,7 @@ const web = async (_options) => {
 
 const api = async (_options) => {
 	clearConsole();
-	
+
 	return await initAPIs();
 };
 

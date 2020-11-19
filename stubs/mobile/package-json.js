@@ -9,6 +9,7 @@ packageJson.content = `{
   "main": "wdio.conf.js",
   "dependencies": {
     "appium": "^1.13.0",
+    "appium-doctor": "^1.15.4",
     "chai": "^4.2.0"
   },
   "devDependencies": {

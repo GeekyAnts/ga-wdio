@@ -1,5 +1,5 @@
 const program = require("commander");
-const { create } = require("../create");
+const { create } = require("../create");
 const doctor = require("../appium/doctor");
 const { web, api, ios, android } = require("../run");
 const { makeRed } = require("../helpers/colors");
@@ -34,7 +34,7 @@ bootstrap.run = () => {
 	program
 		.command("run:web")
 		.description("[For WebApp] Runs the testing scripts with the options / stacks specified")
-		.option("-s, --stack <local> <browser-stack> <browser-stack-local>", "runs your tests on the local system or browser-stack", "local") 
+		.option("-s, --stack <local> <browser-stack> <browser-stack-local>", "runs your tests on the local system or browser-stack", "local")
 		.option("-b, --browser <chrome> <firefox>", "web browser [chrome or firefox]", "chrome")
 		.option("-m, --mode [headless]", "sets the mode to the run web-browser, this feature is applicable only with local stack", "head")
 		.on("--help", () => {
@@ -45,7 +45,7 @@ bootstrap.run = () => {
 			console.log("  ga-wdio run:web --stack=browser-stack --browser=firefox");
 		})
 		.action(web);
-	
+
 	program
 		.command("run:api")
 		.description("[For API] Runs the testing API scripts in sync mode")
@@ -69,7 +69,7 @@ bootstrap.run = () => {
 			console.log("  ga-wdio run:ios --stack=browser-stack");
 		})
 		.action(ios);
-	
+
 	program
 		.command("run:android")
 		.description("[For Mobile] Runs the testing scripts on Android platform")
@@ -98,7 +98,7 @@ bootstrap.upload = () => {
 	program
 		.command("upload:app")
 		.description("Uploads IPA or APK file to browser stack & returns the app url with custom ID")
-		.option("-f, --file </path/to/file>", "runs your tests on the local system or browser-stack") 
+		.option("-f, --file </path/to/file>", "runs your tests on the local system or browser-stack")
 		.option("-u, --username <username>", "browser-stack username")
 		.option("-p, --password <password>", "browser-stack password")
 		.option("-c, --customId <MyApp>", "your custom ID for the app")
@@ -115,9 +115,9 @@ bootstrap.handler = () => {
 	program
 		.parse(process.argv);
 
-	if (! process.argv.slice(2).length) {
+	if (!process.argv.slice(2).length) {
 		program.outputHelp(makeRed);
-	}	
+	}
 };
 
 module.exports = bootstrap;

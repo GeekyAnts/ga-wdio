@@ -5,7 +5,7 @@ const shutDown = (_msg) => {
 };
 
 const exist = (_variable, _msg) => {
-	if (! _variable) {
+	if (!_variable) {
 		return shutDown(_msg);
 	}
 

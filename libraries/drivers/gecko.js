@@ -15,20 +15,20 @@ exports.browser_ext = process.platform === "win32" ? "geckodriver.exe" : "geckod
 exports.path = path.join(exports.npm_bin_path, exports.browser_ext);
 
 exports.start = args => {
-	let command = exports.path;
-	if (! fs.existsSync(command)) {
+  let command = exports.path;
+  if (!fs.existsSync(command)) {
     console.log("Could not find geckodriver in default path: ", command);
     console.log("Falling back to use global geckodriver bin");
 
-		process.exit(1);
-	}
+    process.exit(1);
+  }
 
   const cp = spawn(command, args);
   cp.stdout.pipe(process.stdout);
-	cp.stderr.pipe(process.stderr);
-	
-	exports.defaultInstance = cp;
-	
+  cp.stderr.pipe(process.stderr);
+
+  exports.defaultInstance = cp;
+
   return exports.defaultInstance;
 }
 

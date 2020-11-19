@@ -4,7 +4,7 @@ const {
 
 const {
 	apiJS, constantsJS, storeJS,
-	employeeIndexJS, employeeListJS, 
+	employeeIndexJS, employeeListJS,
 	employeeSingleJS
 } = require("../../stubs/api");
 
@@ -60,13 +60,13 @@ api.generateFolders = async (_appName) => {
 
 // Create conf file and write content...
 api.generateFiles = async (_answers) => {
-	
+
 	let content = constantsJS.content(_answers);
 	await createFileWithContent(`./${_answers.appName}/${constantsJS.path}`, constantsJS.filename, content);
-	
+
 	await createFileWithContent(`./${_answers.appName}/${apiJS.path}`, apiJS.filename, apiJS.content);
 	await createFileWithContent(`./${_answers.appName}/${storeJS.path}`, storeJS.filename, storeJS.content);
-	
+
 	await createFileWithContent(`./${_answers.appName}/${employeeIndexJS.path}`, employeeIndexJS.filename, employeeIndexJS.content);
 	await createFileWithContent(`./${_answers.appName}/${employeeListJS.path}`, employeeListJS.filename, employeeListJS.content);
 	await createFileWithContent(`./${_answers.appName}/${employeeSingleJS.path}`, employeeSingleJS.filename, employeeSingleJS.content);

@@ -5,7 +5,7 @@ let designer = {};
 designer.createFolder = async (_folder) => {
 	return new Promise((resolve, reject) => {
 		access(_folder, constants.F_OK, (err) => {
-			if (! err) {
+			if (!err) {
 				return resolve(true);
 			}
 

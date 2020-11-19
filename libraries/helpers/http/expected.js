@@ -19,7 +19,7 @@ expected.init = async (_expected, _response) => {
 	_errors.headers = [];
 	_errors.body = [];
 
-	if (! _response.ok) {
+	if (!_response.ok) {
 		return {};
 	}
 
@@ -30,14 +30,14 @@ expected.init = async (_expected, _response) => {
 	if (_expected.headers !== undefined && Object.keys(_expected.headers) !== 0) {
 		for (const iterator in _expected.headers) {
 			// Check if the index exist as expected
-			if (! headers.get(`${iterator}`)) {
+			if (!headers.get(`${iterator}`)) {
 				let _u = [];
 				_u['key'] = iterator;
 				_u['value'] = "Not available";
 
 				_errors.headers.push(_u);
 			}
-			
+
 			// Match the value of each index in headers
 			if (headers.get(`${iterator}`) !== _expected.headers[`${iterator}`]) {
 				let _u = [];
@@ -71,10 +71,10 @@ expected.init = async (_expected, _response) => {
 			responseTree.push(_data);
 		}
 	});
-	
+
 	const isSomethingLeft = difference(expectedTree, responseTree);
 	if (isSomethingLeft && isSomethingLeft.length > 0) {
-		
+
 		isSomethingLeft.map(_value => {
 			let _u = [];
 			_u["key"] = _value;
@@ -85,13 +85,13 @@ expected.init = async (_expected, _response) => {
 	}
 
 	if (_expected.hasOwnProperty('store') && !isEmpty(_expected.store)) {
-    for (const iterator in _expected.store) {
-      let _iterator = get(_expected.store, iterator, undefined);
+		for (const iterator in _expected.store) {
+			let _iterator = get(_expected.store, iterator, undefined);
 			if (_iterator) _iterator = _iterator.replace("body.", "");
 
 			GlobalStore.modules.set(iterator, get(body, _iterator));
-    }
-  }
+		}
+	}
 
 	return _errors;
 };

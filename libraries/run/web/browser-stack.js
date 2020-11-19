@@ -1,9 +1,9 @@
 const executor = require("./exec");
-const { browserStackPath, browserStackLocalPath } = require("../../helpers/path");
+const { browserStackPath, browserStackLocalPath } = require("../../helpers/path");
 
 let browserStack = {};
 
-browserStack.init = async () => {	
+browserStack.init = async () => {
 	const _conf = browserStackPath();
 
 	executor

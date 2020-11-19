@@ -1,6 +1,6 @@
- /**
- * Makes the request with the created configuration
- */
+/**
+* Makes the request with the created configuration
+*/
 
 const kernel = require("./kernel");
 const fetch = require("node-fetch");
@@ -8,8 +8,8 @@ const { get, includes } = require("lodash");
 const { shutDown } = require("../../helpers/path");
 
 const request = async (_options) => {
-	
-	const { 
+
+	const {
 		uri, method, headers, timeout, data
 	} = _options;
 
@@ -23,7 +23,7 @@ const request = async (_options) => {
 
 	options.method = method;
 	options.timeout = timeout;
-	
+
 	// Combining headers
 	options.headers = {
 		..._headers,
@@ -39,7 +39,7 @@ const request = async (_options) => {
 
 	// Returns after adding request and kernel filteration, 
 	// if needed any in near future...
-	return fetch (uri, options)
+	return fetch(uri, options)
 		.then(kernel);
 };
 

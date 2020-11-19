@@ -9,7 +9,7 @@ let sync = {};
 
 sync.start = async (_app) => {
 	var GlobalStore = require("./store");
-	
+
 	terminal.centeredHeading("GA-WDIO Test Report".bold);
 
 	if (_app.hasOwnProperty("store") && !isEmpty(_app.store)) {
@@ -18,7 +18,7 @@ sync.start = async (_app) => {
 
 	for (const _api of _app.apis) {
 		const options = await buildRequest(_app.domains, _api);
-		
+
 		try {
 			const response = await request(options);
 			const _expected = await expected.init(_api.expected, response);

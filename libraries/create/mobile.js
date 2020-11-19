@@ -5,7 +5,7 @@ const {
 const {
 	packageJson, babelConfigJs, envJS,
 
-	androidConfJs, iosConfJs, browserStackAndroidConfJs, 
+	androidConfJs, iosConfJs, browserStackAndroidConfJs,
 	browserStackIosConfJs, browserAndroidConfJs, browserIosConfJs,
 
 	appAlertJs, selectClassJs,
@@ -13,11 +13,11 @@ const {
 	formPageJs, loginJs, signUpJs, nativeScreenJs, tabPageJs,
 	pageJs, scrollToElementJs, learnPageJs,
 
-	changeTabTestJs, formTestJs, learnDocsTestJs, loginTestJs, 
+	changeTabTestJs, formTestJs, learnDocsTestJs, loginTestJs,
 	scrollTestJs, signUpTestJs,
 
-	xpath, formPathJSON_aND, loginPathJSON_aND, signupPathJSON_aND, 
-	tabPathJSON_aND, formPathJSON_iOS, loginPathJSON_iOS, 
+	xpath, formPathJSON_aND, loginPathJSON_aND, signupPathJSON_aND,
+	tabPathJSON_aND, formPathJSON_iOS, loginPathJSON_iOS,
 	signupPathJSON_iOS, tabPathJSON_iOS, learnPathJSON
 } = require("../../stubs/mobile");
 
@@ -26,7 +26,7 @@ let mobile = {};
 // Folders & Sub-Folders paths...
 mobile.structure = {
 	"directories": [
-		"conf",		
+		"conf",
 		"src",
 		"store"
 	],
@@ -120,7 +120,7 @@ mobile.generateFiles = async (_answers) => {
 	await createFileWithContent(`./${_answers.appName}/${loginTestJs.path}`, loginTestJs.filename, loginTestJs.content);
 	await createFileWithContent(`./${_answers.appName}/${scrollTestJs.path}`, scrollTestJs.filename, scrollTestJs.content);
 	await createFileWithContent(`./${_answers.appName}/${signUpTestJs.path}`, signUpTestJs.filename, signUpTestJs.content);
-	
+
 	// Create src's xpath file...
 	await createFileWithContent(`./${_answers.appName}/${xpath.path}`, xpath.filename, xpath.content);
 
@@ -135,10 +135,10 @@ mobile.generateFiles = async (_answers) => {
 	await createFileWithContent(`./${_answers.appName}/${loginPathJSON_iOS.path}`, loginPathJSON_iOS.filename, loginPathJSON_iOS.content);
 	await createFileWithContent(`./${_answers.appName}/${signupPathJSON_iOS.path}`, signupPathJSON_iOS.filename, signupPathJSON_iOS.content);
 	await createFileWithContent(`./${_answers.appName}/${tabPathJSON_iOS.path}`, tabPathJSON_iOS.filename, tabPathJSON_iOS.content);
-	
+
 	// Create xpath's web files..
 	await createFileWithContent(`./${_answers.appName}/${learnPathJSON.path}`, learnPathJSON.filename, learnPathJSON.content);
-	
+
 	// Create root directory files...
 	await createFileWithContent(`./${_answers.appName}`, packageJson.filename, packageJson.content);
 	await createFileWithContent(`./${_answers.appName}`, babelConfigJs.filename, babelConfigJs.content);

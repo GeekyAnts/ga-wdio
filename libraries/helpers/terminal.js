@@ -23,11 +23,11 @@ terminal.clearConsole = () => process.stdout.write('\033c');
 
 terminal.bgGreenBlack = (_sessionID) => console.log(`${_sessionID}`.bgGreen.black);
 
-terminal.showInfo = (_prefix, _midfix, _postfix) => 
+terminal.showInfo = (_prefix, _midfix, _postfix) =>
 	console.log(
-		"?".green, 
-		`${_prefix}`.boldWhite, 
-		`${_midfix}`.cyan, 
+		"?".green,
+		`${_prefix}`.boldWhite,
+		`${_midfix}`.cyan,
 		`${_postfix}`.boldWhite
 	);
 
@@ -37,7 +37,7 @@ terminal.centeredHeading = (str, _noLine) => {
 		terminal.drawLine();
 	}
 
-	str = typeof(str) == 'string' && str.trim().length > 0 ? str.trim() : '';
+	str = typeof (str) == 'string' && str.trim().length > 0 ? str.trim() : '';
 
 	// Get the available screen size
 	const width = process.stdout.columns;

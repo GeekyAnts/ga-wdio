@@ -1,12 +1,12 @@
 const _sync = require("./sync");
-const { get } = require("lodash");
+const { get } = require("lodash");
 const { apiRepo, shutDown } = require("../../helpers/path");
 
 let api = {};
 
 api.validateAPI = async (_path) => {
 	const _app = require(_path);
-	
+
 	const domains = get(_app, "domains", undefined);
 	const defaultDomain = get(domains, "default", undefined);
 
@@ -20,7 +20,7 @@ api.validateAPI = async (_path) => {
 	}
 
 	await _sync.start(_app);
-}; 
+};
 
 api.initAPIs = async () => {
 	const _path = apiRepo();

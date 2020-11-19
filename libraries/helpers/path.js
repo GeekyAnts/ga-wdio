@@ -8,7 +8,7 @@ const shutDown = (_msg) => {
 };
 
 const checkIfExist = (_path, _what) => {
-	if (! fs.existsSync(_path)) {
+	if (!fs.existsSync(_path)) {
 		shutDown(`${_what} does not exists.`);
 	}
 };
@@ -20,13 +20,13 @@ const mobileDotEnv = () => {
 	dotenv.config({
 		path: _path
 	});
-	
+
 	return _path;
 };
 
 const appiumDoctor = () => {
 	const _path = path.join(process.env.GA_PROJECT_PATH, "node_modules/.bin/appium-doctor")
-	checkIfExist(_path, "node_modules");
+	checkIfExist(_path, "appium-doctor");
 
 	return _path;
 };
@@ -37,7 +37,7 @@ const npm = () => {
 
 	return _path;
 };
-	
+
 const wdio = () => {
 	const _path = `${npm()}/.bin/wdio`;
 	checkIfExist(_path, "WebDriverIO");
@@ -55,35 +55,35 @@ const gecko = () => {
 const chrome = () => {
 	const _path = path.join(process.env.GA_PROJECT_PATH, "conf/chrome.conf.js");;
 	checkIfExist(_path, "Chrome's conf");
-	
+
 	return _path;
 };
 
 const geckoHeadless = () => {
 	const _path = path.join(process.env.GA_PROJECT_PATH, "conf/gecko-headless.conf.js");;
 	checkIfExist(_path, "Headless Gecko's conf");
-	
+
 	return _path;
 };
 
 const chromeHeadless = () => {
 	const _path = path.join(process.env.GA_PROJECT_PATH, "conf/chrome-headless.conf.js");;
 	checkIfExist(_path, "Headless Chrome's conf");
-	
+
 	return _path;
 };
 
 const browserStack = () => {
 	const _path = path.join(process.env.GA_PROJECT_PATH, "conf/browser-stack.conf.js");
 	checkIfExist(_path, "Browser-Stack's conf");
-	
+
 	return _path;
 };
 
 const browserStackLocal = () => {
 	const _path = path.join(process.env.GA_PROJECT_PATH, "conf/local.conf.js");
 	checkIfExist(_path, "Browser-Stack Local's conf");
-	
+
 	return _path;
 }
 

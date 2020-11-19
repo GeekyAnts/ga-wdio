@@ -7,8 +7,8 @@ const { perform: runNpmInstall } = require("../install");
 
 // Load all the necessary questions...
 const {
-	stack, browserStackUser, browserStackKey, osVersion, 
-	osName, logLevel, screenshotPath, baseUrl, 
+	stack, browserStackUser, browserStackKey, osVersion,
+	osName, logLevel, screenshotPath, baseUrl,
 	waitTimeout, retryCount, appName, arch
 } = require("../../questions");
 
@@ -18,7 +18,7 @@ const create = async (options, cmd) => {
 	// Start the CLI communication...
 	inquirer
 		.prompt([
-			arch, appName, stack, browserStackUser, browserStackKey, osName, 
+			arch, appName, stack, browserStackUser, browserStackKey, osName,
 			osVersion, logLevel, baseUrl, waitTimeout, retryCount
 		])
 		.then(async answers => {
@@ -43,7 +43,7 @@ const create = async (options, cmd) => {
 
 			showInfo("Installing NPM dependencies to", answers.appName, "directory...");
 			drawLine();
-			
+
 			await runNpmInstall(answers.appName);
 		});
 };

@@ -5,10 +5,10 @@ const tcpPortUsed = require("tcp-port-used");
 
 const getPortFromArgs = args => {
   let port = 9515;
-  if (! args) {
+  if (!args) {
     return port;
-	}
-	
+  }
+
   const portRegexp = /--port=(\d*)/;
   const portArg = args.find(arg => portRegexp.test(arg));
   if (portArg) {
@@ -31,33 +31,33 @@ exports.path = path.join(exports.npm_bin_path, exports.browser_ext);
 
 exports.start = (args, returnPromise) => {
   let command = exports.path;
-  if (! fs.existsSync(command)) {
+  if (!fs.existsSync(command)) {
     console.log("Could not find chromedriver in default path: ", command);
     console.log("Falling back to use global chromedriver bin");
-		
-		process.exit(1);
-	}
+
+    process.exit(1);
+  }
 
   const cp = spawn(command, args);
   cp.stdout.pipe(process.stdout);
   cp.stderr.pipe(process.stderr);
-	
-	exports.defaultInstance = cp;
-  if (! returnPromise) {
+
+  exports.defaultInstance = cp;
+  if (!returnPromise) {
     return cp;
-	}
+  }
 
   const port = getPortFromArgs(args);
   const pollInterval = 100;
-	const timeout = 10000;
+  const timeout = 10000;
 
-	return tcpPortUsed
-		.waitUntilUsed(port, pollInterval, timeout)
+  return tcpPortUsed
+    .waitUntilUsed(port, pollInterval, timeout)
     .then(() => cp);
 };
 
 exports.stop = () => {
-  if (exports.defaultInstance != null){
+  if (exports.defaultInstance != null) {
     exports.defaultInstance.kill();
   }
 };
