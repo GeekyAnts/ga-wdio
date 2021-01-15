@@ -16,7 +16,9 @@ confJs.content = answers => {
 		"./src/test/login-test.js",
 		"./src/test/form-test.js",
 		"./src/test/signUp-test.js",
-		"./src/test/changeTab-test.js"
+		"./src/test/changeTab-test.js",
+		"./src/test/webview-test.js",
+		"./src/test/swipe-test.js"
 	],
 
 	services: ["appium"],
