@@ -1,7 +1,3 @@
-
-
-
-
 let gesturesJs = {};
 
 gesturesJs.path = "src/helpers";
@@ -190,7 +186,3 @@ export default Gestures;
 `;
 
 module.exports = gesturesJs;
-
-
-
-

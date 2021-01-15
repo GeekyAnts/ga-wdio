@@ -1,6 +1,3 @@
-
-
-
 let swipePageJs = {};
 
 swipePageJs.path = "src/common";
