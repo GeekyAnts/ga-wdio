@@ -14,6 +14,8 @@ module.exports = {
   // helpers...
   appAlertJs: require("./src/helpers/AppAlert"),
   selectClassJs: require("./src/helpers/SelectClass"),
+  gesturesJs: require("./src/helpers/Gestures"),
+  webviewJs: require("./src/helpers/Webview"),
 
   // commons...
   formPageJs: require("./src/common/FormPage"),
@@ -24,6 +26,9 @@ module.exports = {
   pageJs: require("./src/common/Page"),
   scrollToElementJs: require("./src/common/ScrollToElement.js"),
   learnPageJs: require("./src/common/LearnPage"),
+  tabBarPageJs: require("./src/common/TabBarPage"),
+  webviewPageJs: require("./src/common/WebviewPage"),
+  swipePageJs: require("./src/common/SwipePage"),
 
   // tests...
   changeTabTestJs: require("./src/test/changeTab-test"),
@@ -32,6 +37,8 @@ module.exports = {
   loginTestJs: require("./src/test/login-test"),
   scrollTestJs: require("./src/test/scroll-test"),
   signUpTestJs: require("./src/test/signUp-test"),
+  webviewTestJs:require("./src/test/webview-test"),
+  swipeTestJs:require("./src/test/swipe-test"),
 
   // xpaths...
   xpath: require("./src/xpath"),

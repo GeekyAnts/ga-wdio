@@ -9,12 +9,13 @@ const {
 	browserStackIosConfJs, browserAndroidConfJs, browserIosConfJs,
 
 	appAlertJs, selectClassJs,
+	gesturesJs, webviewJs,
 
 	formPageJs, loginJs, signUpJs, nativeScreenJs, tabPageJs,
-	pageJs, scrollToElementJs, learnPageJs,
+	pageJs, scrollToElementJs, learnPageJs, tabBarPageJs, webviewPageJs, swipePageJs,
 
 	changeTabTestJs, formTestJs, learnDocsTestJs, loginTestJs,
-	scrollTestJs, signUpTestJs,
+	scrollTestJs, signUpTestJs, webviewTestJs, swipeTestJs,
 
 	xpath, formPathJSON_aND, loginPathJSON_aND, signupPathJSON_aND,
 	tabPathJSON_aND, formPathJSON_iOS, loginPathJSON_iOS,
@@ -26,6 +27,7 @@ let mobile = {};
 // Folders & Sub-Folders paths...
 mobile.structure = {
 	"directories": [
+		"app",
 		"conf",
 		"src",
 		"store"
@@ -107,11 +109,16 @@ mobile.generateFiles = async (_answers) => {
 	await createFileWithContent(`./${_answers.appName}/${tabPageJs.path}`, tabPageJs.filename, tabPageJs.content);
 	await createFileWithContent(`./${_answers.appName}/${pageJs.path}`, pageJs.filename, pageJs.content);
 	await createFileWithContent(`./${_answers.appName}/${scrollToElementJs.path}`, scrollToElementJs.filename, scrollToElementJs.content);
-	await createFileWithContent(`./${_answers.appName}/${learnPageJs.path}`, learnPageJs.filename, learnPageJs.content);
+    await createFileWithContent(`./${_answers.appName}/${learnPageJs.path}`, learnPageJs.filename, learnPageJs.content);
+    await createFileWithContent(`./${_answers.appName}/${tabBarPageJs.path}`,tabBarPageJs.filename,tabBarPageJs.content);
+    await createFileWithContent(`./${_answers.appName}/${webviewPageJs.path}`,webviewPageJs.filename, webviewPageJs.content);
+    await createFileWithContent(`./${_answers.appName}/${swipePageJs.path}`,swipePageJs.filename,swipePageJs.content)
 
 	// Create src's helpers files...
 	await createFileWithContent(`./${_answers.appName}/${appAlertJs.path}`, appAlertJs.filename, appAlertJs.content);
 	await createFileWithContent(`./${_answers.appName}/${selectClassJs.path}`, selectClassJs.filename, selectClassJs.content);
+	await createFileWithContent(`./${_answers.appName}/${gesturesJs.path}`, gesturesJs.filename, gesturesJs.content);
+	await createFileWithContent(`./${_answers.appName}/${webviewJs.path}`, webviewJs.filename, webviewJs.content);
 
 	// Create src's test files...
 	await createFileWithContent(`./${_answers.appName}/${changeTabTestJs.path}`, changeTabTestJs.filename, changeTabTestJs.content);
@@ -120,6 +127,8 @@ mobile.generateFiles = async (_answers) => {
 	await createFileWithContent(`./${_answers.appName}/${loginTestJs.path}`, loginTestJs.filename, loginTestJs.content);
 	await createFileWithContent(`./${_answers.appName}/${scrollTestJs.path}`, scrollTestJs.filename, scrollTestJs.content);
 	await createFileWithContent(`./${_answers.appName}/${signUpTestJs.path}`, signUpTestJs.filename, signUpTestJs.content);
+    await createFileWithContent(`./${_answers.appName}/${webviewTestJs.path}`,webviewTestJs.filename, webviewTestJs.content);
+    await createFileWithContent(`./${_answers.appName}/${swipeTestJs.path}`,swipeTestJs.filename,swipeTestJs.content)
 
 	// Create src's xpath file...
 	await createFileWithContent(`./${_answers.appName}/${xpath.path}`, xpath.filename, xpath.content);
