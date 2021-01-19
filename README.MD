@@ -21,6 +21,32 @@ An automation CLI tool that creates the tests project for Web, API & Mobile apps
 npm install -g ga-wdio
 ```
 
+## Setup for ios
+###  Configure webdriveragent 
+
+  * Register  bundle indentifier for webdriveragent with you organisation. <br>
+ eg: <kbd>com.[companyName].WebDriverAgent</kbd>
+
+ * Open WebDriverAgent project in xCode.<br>
+To find it please use the following path :<kbd> /usr/local/lib/node_modules/appium/node_modules/appium-webdriveragent/WebDriverAgent.xcodeproj</kbd>
+
+ * Click on Project name at the left navigation (WebDriverAgent)
+ * Select Automatically manage signing for <kbd>WebDriverAgentLib</kbd> & <kbd>WebDriverAgentRunner</kbd> targets and  then select your Development Team.
+
+To test the configuration run following command in <kbd>/usr/local/lib/node_modules/appium/node_modules/appium-webdriveragent</kbd> directory 
+``` 
+xcodebuild -project WebDriverAgent.xcodeproj -scheme WebDriverAgentRunner -destination 'id=UDID' test 
+```
+NOTE: To run on simulator use .app file.
+
+Link to official documentation  https://github.com/appium/appium-xcuitest-driver/blob/master/docs/real-device-config.md
+
+## Setup for Android
+ No extra setup needed for android.
+
+ ### Link to the demo application
+ - https://github.com/webdriverio/native-demo-app/releases
+
 ## Documentation:
 
 - [Home](https://github.com/GeekyAnts/ga-wdio/wiki)
