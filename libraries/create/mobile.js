@@ -9,7 +9,7 @@ const {
 	browserStackIosConfJs, browserAndroidConfJs, browserIosConfJs,
 
 	appAlertJs, selectClassJs,
-	gesturesJs,webviewJs,
+	gesturesJs, webviewJs,
 
 	formPageJs, loginJs, signUpJs, nativeScreenJs, tabPageJs,
 	pageJs, scrollToElementJs, learnPageJs, tabBarPageJs, webviewPageJs, swipePageJs,
@@ -109,7 +109,7 @@ mobile.generateFiles = async (_answers) => {
 	await createFileWithContent(`./${_answers.appName}/${tabPageJs.path}`, tabPageJs.filename, tabPageJs.content);
 	await createFileWithContent(`./${_answers.appName}/${pageJs.path}`, pageJs.filename, pageJs.content);
 	await createFileWithContent(`./${_answers.appName}/${scrollToElementJs.path}`, scrollToElementJs.filename, scrollToElementJs.content);
-	await createFileWithContent(`./${_answers.appName}/${learnPageJs.path}`, learnPageJs.filename, learnPageJs.content);
+    await createFileWithContent(`./${_answers.appName}/${learnPageJs.path}`, learnPageJs.filename, learnPageJs.content);
     await createFileWithContent(`./${_answers.appName}/${tabBarPageJs.path}`,tabBarPageJs.filename,tabBarPageJs.content);
     await createFileWithContent(`./${_answers.appName}/${webviewPageJs.path}`,webviewPageJs.filename, webviewPageJs.content);
     await createFileWithContent(`./${_answers.appName}/${swipePageJs.path}`,swipePageJs.filename,swipePageJs.content)
