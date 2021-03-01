@@ -10,7 +10,7 @@ An automation CLI tool that creates the tests project for Web, API & Mobile apps
 * Supports iOS & Android Mobile Browser Testing
 * Supports Browser Stack cloud environment for Web & Mobile Testing
 * CLI command to 
-	* create the boilerplate
+	* create the boilerplate for Web, Mobile (iOS & Android), and APIs applications
 	* run the test cases
 	* check the appium's necessary & optional dependencies on the system
 	* upload the mobile APK or IPA to the browser-stack cloud
@@ -36,6 +36,10 @@ npm install -g ga-wdio
 
 GA WDIO supported version & other security related details are available in our [SECURITY](https://github.com/GeekyAnts/ga-wdio/blob/master/SECURITY.md) file.
 
-## License
+## License:
 
 GA WDIO is MIT licensed, as found in the [LICENSE](https://github.com/GeekyAnts/ga-wdio/blob/master/LICENSE.MD) file.
+
+## Blogs:
+
+1. [GA-WDIO: Automating Mobile App Testing](https://techblog.geekyants.com/ga-wdio-automating-mobile-app-testing) by [Vinod Yevatikar](https://github.com/vinodf2f)
