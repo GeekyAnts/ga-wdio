@@ -43,3 +43,4 @@ GA WDIO is MIT licensed, as found in the [LICENSE](https://github.com/GeekyAnts/
 ## Blogs:
 
 1. [GA-WDIO: Automating Mobile App Testing](https://techblog.geekyants.com/ga-wdio-automating-mobile-app-testing) by [Vinod Yevatikar](https://github.com/vinodf2f)
+2. [GA-WDIO: Automating Web App Testing](https://techblog.geekyants.com/ga-wdio-automating-web-app-testing) by [Rajat Jainwal](https://hashnode.com/@Rajat117)
